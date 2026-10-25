@@ -1,0 +1,683 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>BuildGuard AI</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#001d31","surface-container-lowest":"#ffffff","on-error-container":"#93000a","primary-container":"#15803d","tertiary":"#4f576d","on-error":"#ffffff","tertiary-fixed-dim":"#bec6e0","error":"#ba1a1a","surface-bright":"#f8f9ff","on-primary-fixed":"#00210a","on-primary-container":"#d3ffd5","on-primary":"#ffffff","outline":"#6f7a6e","primary":"#00652c","surface-container-highest":"#d3e4fe","on-background":"#0b1c30","outline-variant":"#becabc","on-tertiary-fixed-variant":"#3f465c","on-surface-variant":"#3f493f","tertiary-fixed":"#dae2fd","on-surface":"#0b1c30","secondary-fixed":"#cce5ff","inverse-surface":"#213145","primary-fixed-dim":"#79db8d","error-container":"#ffdad6","on-secondary-container":"#00476e","inverse-primary":"#79db8d","on-tertiary-container":"#f2f3ff","secondary":"#006398","on-tertiary":"#ffffff","tertiary-container":"#676f86","on-secondary-fixed-variant":"#004b73","surface-variant":"#d3e4fe","surface-dim":"#cbdbf5","secondary-fixed-dim":"#93ccff","surface-tint":"#006d30","surface-container-low":"#eff4ff","secondary-container":"#5bb8fe","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#005323","primary-fixed":"#95f8a7","background":"#f8f9ff","surface":"#f8f9ff","surface-container":"#e5eeff","on-tertiary-fixed":"#131b2e","on-secondary":"#ffffff","surface-container-high":"#dce9ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","margin-tablet":"1.5rem","space-xs":"0.25rem",margin:"1rem","space-xl":"2.25rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-sm":"0.5rem",gutter:"1rem","gutter-tablet":"1.25rem"},fontFamily:{"data-tabular":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"]},fontSize:{"data-tabular":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg-mobile":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0",fontWeight:"400"}],"headline-sm":["1rem",{lineHeight:"1.375rem",letterSpacing:"0",fontWeight:"600"}],"label-md":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0",fontWeight:"400"}],"headline-md":["1.25rem",{lineHeight:"1.625rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-lg":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"headline-xl-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"700"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-outline-variant/30"><div class="h-16 w-full px-space-md lg:px-margin-desktop flex items-center justify-between gap-space-md bg-white border-b border-outline-variant/20"><div class="flex items-center gap-1.5 flex-shrink-0"><span class="text-[18px] font-bold tracking-tight text-[#0b1c30]">BuildGuard</span><span class="text-[18px] font-bold text-[#006398] flex items-center gap-1">AI<span class="inline-block w-2.5 h-2.5 rounded-full bg-[#15803d]"></span></span></div><div class="hidden xl:flex items-center bg-[#eff4ff] px-3 py-1.5 rounded-full gap-2"><a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-medium text-sm" data-path="dashboard" href="#">Dashboard</a><a aria-current="page" class="px-4 py-1.5 bg-[#15803d] text-white font-medium text-xs rounded-full shadow-sm text-center leading-tight" data-path="live-monitoring" href="#">Live<br>Monitoring</a><a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-medium text-sm flex items-center gap-1.5" data-path="alerts" href="#">Alerts<span class="w-4 h-4 rounded-full bg-[#ba1a1a] text-white text-[11px] font-bold flex items-center justify-center leading-none">3</span></a><a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-medium text-sm" data-path="sitemap" href="#">Sitemap</a><a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-medium text-sm" data-path="movement" href="#">Movement</a><a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface transition-colors font-medium text-sm" data-path="wastage" href="#">Wastage</a></div><div class="flex items-center gap-3 flex-shrink-0"><button class="flex items-center gap-2 bg-[#eff4ff] hover:bg-[#e5eeff] text-on-surface px-3 py-1.5 rounded-full transition-colors border border-outline-variant/40" type="button"><span class="material-symbols-outlined text-[18px] text-[#006398]">apartment</span><span class="font-label-md text-label-md font-semibold">Residential Tower A</span><span class="w-2 h-2 rounded-full bg-[#15803d]"></span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button><button aria-label="Notifications" class="relative p-1.5 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#ba1a1a] text-white text-[10px] font-bold flex items-center justify-center leading-none">3</span></button><div class="flex items-center gap-2 pl-1 cursor-pointer"><div class="w-8 h-8 rounded-full bg-[#00652c] text-white flex items-center justify-center font-bold text-xs font-headline-sm">RM</div><div class="hidden md:flex flex-col text-left"><span class="text-sm font-semibold text-on-surface leading-tight">Rajesh M.</span><span class="text-[11px] text-on-surface-variant leading-tight">Project Director</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant hidden md:block">expand_more</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full">
+<div class="px-space-md lg:px-margin-desktop py-space-md flex flex-col gap-space-lg">
+<!-- Top Action Toolbar -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm relative z-30">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Live monitoring section&nbsp;</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2.5 w-full md:w-auto justify-end">
+<!-- Layout Presets -->
+<div class="relative group z-50" id="grid-layout-dropdown-wrapper">
+<button class="px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-2 border border-outline-variant/30" id="grid-layout-btn" onclick="event.stopPropagation(); document.getElementById('grid-layout-menu').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">grid_view</span>
+<span class="" id="current-grid-layout-label">Single (1×1)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-64 rounded-xl bg-surface-container-lowest shadow-2xl border border-outline-variant/40 py-2 group-hover:block hover:block z-50" id="grid-layout-menu">
+<div class="px-3 py-1.5 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold border-b border-outline-variant/20 mb-1 flex items-center justify-between">
+<span class="">Select Grid Matrix</span>
+<span class="text-[11px] text-secondary font-mono font-medium">Auto-Scaling</span>
+</div>
+<button class="w-full flex items-center justify-between px-3 py-2 text-left text-on-surface hover:bg-surface-container-low transition-colors font-body-md text-body-md group/opt" onclick="selectGridLayout(1, 'Single (1×1)')" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">crop_square</span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">1×1 Single Stream</span>
+<span class="text-label-sm text-on-surface-variant">Default focused view</span>
+</div>
+</div>
+<span class="grid-opt-check material-symbols-outlined text-[18px] text-primary" data-grid="1">check</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 text-left text-on-surface hover:bg-surface-container-low transition-colors font-body-md text-body-md group/opt" onclick="selectGridLayout(2, '2×2 Matrix (4)')" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">grid_view</span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">2×2 Matrix</span>
+<span class="text-label-sm text-on-surface-variant">Up to 4 active cameras</span>
+</div>
+</div>
+<span class="grid-opt-check hidden material-symbols-outlined text-[18px] text-primary" data-grid="2">check</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 text-left text-on-surface hover:bg-surface-container-low transition-colors font-body-md text-body-md group/opt" onclick="selectGridLayout(3, '3×3 Matrix (9)')" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">apps</span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">3×3 Matrix</span>
+<span class="text-label-sm text-on-surface-variant">Up to 9 operational feeds</span>
+</div>
+</div>
+<span class="grid-opt-check hidden material-symbols-outlined text-[18px] text-primary" data-grid="3">check</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 text-left text-on-surface hover:bg-surface-container-low transition-colors font-body-md text-body-md group/opt" onclick="selectGridLayout(4, '4×4 Matrix (16)')" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">view_module</span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">4×4 Matrix</span>
+<span class="text-label-sm text-on-surface-variant">Multi-node site monitoring (16)</span>
+</div>
+</div>
+<span class="grid-opt-check hidden material-symbols-outlined text-[18px] text-primary" data-grid="4">check</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 text-left text-on-surface hover:bg-surface-container-low transition-colors font-body-md text-body-md group/opt" onclick="selectGridLayout(5, '5×5 Matrix (25)')" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">drag_pan</span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">5×5 Matrix</span>
+<span class="text-label-sm text-on-surface-variant">High-density enterprise matrix (25)</span>
+</div>
+</div>
+<span class="grid-opt-check hidden material-symbols-outlined text-[18px] text-primary" data-grid="5">check</span>
+</button>
+</div>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-medium transition-colors flex items-center gap-1.5" onclick="takeAllSnapshots()">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span class="hidden lg:inline">Snapshot All</span>
+</button>
+<!-- Prominent Add Camera Button -->
+<button class="px-4 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md transition-all flex items-center gap-2 active:scale-95" id="btn-add-camera" onclick="addCameraStream()">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">+ Add Camera</span>
+</button>
+</div>
+</div>
+<!-- Surveillance Grid Container -->
+<div class="grid gap-space-lg w-full transition-all duration-300 grid-cols-1 relative z-10" id="cctv-grid">
+<!-- Primary Camera Feed Card -->
+<div class="camera-card flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden group" id="primary-camera-card">
+<!-- Header Above Footage -->
+<div class="px-space-md lg:px-space-lg py-3 bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-sm border-b border-outline-variant/20">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded font-data-tabular text-data-tabular font-bold bg-surface-container-high text-on-surface" id="main-cam-code">CAM-01</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate" id="main-cam-title">Main Entrance &amp; Inbound Gate</h2>
+</div>
+<span class="hidden sm:inline-block text-outline-variant">•</span>
+<span class="hidden sm:inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant">
+
+
+</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+              LIVE
+            </span>
+<div class="hidden md:flex items-center gap-2 text-on-surface-variant font-data-tabular text-data-tabular">
+<span class="bg-surface-container-low px-2 py-0.5 rounded text-label-sm text-on-surface font-semibold" id="main-cam-res">1080p 30fps</span>
+<span class="text-label-sm text-tertiary" id="main-cam-bandwidth">4.2 Mbps</span>
+</div>
+</div>
+</div>
+<!-- Video Frame Container -->
+<div class="relative w-full aspect-video bg-inverse-surface overflow-hidden flex items-center justify-center select-none" id="main-video-container">
+<!-- Surveillance Background Simulation -->
+<div class="absolute inset-0 bg-cover bg-center brightness-90 filter contrast-125 transition-all duration-300" id="main-feed-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxoahNotBJ4y0YJiCO_E_B-51xZ17trVBzKXfFSCNRIjZfHXUJlQVC4ggYzvf-1T8asHYjSayPR9WVP6_5_rO-ZJOfB_MxqyOeW8xxcjHvq6K__H7faBfkAkX9x8XUambM3ZDQxU_kvA8GTuUvteM4iMNdNC2Q5wQI8PT8xPHyRVEQ4_RklUKDtDCGqgTFmXrVs1WPx0zxOGyeN86R06qLCBzADBeXlUCe3uIZl9Q6eOs6-UVs8KIU')"></div>
+<!-- Technical HUD / Scan Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-transparent to-inverse-surface/40 pointer-events-none"></div>
+<!-- Top-Left CCTV Watermark & Clock -->
+<div class="absolute top-3 left-3 flex flex-col gap-1 z-10">
+<div class="flex items-center gap-2 bg-inverse-surface/80 backdrop-blur-sm px-2.5 py-1 rounded text-surface-bright font-data-tabular text-data-tabular">
+<span class="text-error animate-pulse font-bold">REC ●</span>
+<span class="live-clock font-mono" id="main-live-clock">2026-10-24 22:41:19 IST</span>
+</div>
+<div class="bg-inverse-surface/70 px-2 py-0.5 rounded text-surface-container-highest font-label-sm text-label-sm w-fit" id="main-feed-node-label">
+  Gateway Node • Residential Tower A
+</div>
+</div>
+<!-- Top-Right Drone / AI Status Flag -->
+<div class="absolute top-3 right-3 z-10 flex items-center gap-2">
+<div class="flex items-center gap-1.5 bg-secondary/80 backdrop-blur-sm text-on-secondary px-2.5 py-1 rounded text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]">smart_toy</span>
+<span id="main-ai-flag" class="">AI Edge Inspection Online</span>
+</div>
+</div>
+<!-- Dynamic Overlay Container -->
+<div class="contents" id="main-bounding-boxes">
+<!-- Pallet / Truck overlays default for CAM-01 -->
+<div class="absolute top-1/4 left-1/3 w-72 h-44 border-2 border-secondary-container/90 rounded bg-secondary/10 pointer-events-none z-10 flex flex-col justify-between p-1.5 shadow-lg">
+<div class="flex items-center justify-between bg-on-secondary-fixed/90 px-1.5 py-0.5 rounded text-white font-data-tabular text-label-sm">
+<span class="font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        [Truck MH-12-BQ]
+      </span>
+<span class="text-secondary-fixed font-semibold">Inbound Verified</span>
+</div>
+<div class="self-end bg-inverse-surface/90 text-on-primary-container px-2 py-0.5 rounded font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-primary-fixed">verified</span>
+      RFID #8849-OK
+    </div>
+</div>
+<div class="absolute bottom-1/4 right-1/4 w-48 h-32 border-2 border-primary-fixed/80 rounded bg-primary/10 pointer-events-none z-10 flex flex-col justify-between p-1.5">
+<div class="bg-on-primary-fixed/90 px-1.5 py-0.5 rounded text-white font-data-tabular text-label-sm flex items-center justify-between">
+<span class="font-semibold">[Cement Pallet: 100 bags]</span>
+<span class="text-primary-fixed">98% match</span>
+</div>
+<div class="bg-inverse-surface/85 text-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm">
+      Weight: 5.0 MT Normal
+    </div>
+</div>
+</div>
+<!-- Grid Crosshairs Target in Center -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+<div class="w-16 h-16 border border-surface-container-lowest rounded-full flex items-center justify-center">
+<div class="w-1 h-3 bg-surface-container-lowest"></div>
+<div class="h-1 w-3 bg-surface-container-lowest absolute"></div>
+</div>
+</div>
+<!-- On-Footage Bottom Controls Bar -->
+<div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-inverse-surface via-inverse-surface/70 to-transparent flex items-center justify-between z-20">
+<div class="flex items-center gap-1.5">
+<button class="p-2 rounded-lg bg-surface-container-lowest/20 hover:bg-surface-container-lowest/40 text-surface-container-lowest transition-colors flex items-center justify-center" onclick="toggleAudio(this)" title="Toggle Audio Feed">
+<span class="material-symbols-outlined text-[18px]">volume_off</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-lowest/20 hover:bg-surface-container-lowest/40 text-surface-container-lowest transition-colors flex items-center justify-center" onclick="captureSnapshot('Active Stream')" title="Capture Snapshot">
+<span class="material-symbols-outlined text-[18px]">screenshot</span>
+</button>
+<div class="flex items-center bg-surface-container-lowest/20 rounded-lg p-0.5 text-surface-container-lowest">
+<button class="px-2 py-1 hover:bg-surface-container-lowest/30 rounded text-label-md font-bold" onclick="adjustPrimaryZoom(-1)" title="Zoom Out">-</button>
+<span class="px-1.5 text-label-sm font-data-tabular" id="primary-zoom-label">1.0x</span>
+<button class="px-2 py-1 hover:bg-surface-container-lowest/30 rounded text-label-md font-bold" onclick="adjustPrimaryZoom(1)" title="Zoom In">+</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-surface-container-lowest/20 hover:bg-surface-container-lowest/40 text-surface-container-lowest transition-colors flex items-center justify-center" onclick="toggleFullscreen('primary-camera-card')" title="Fullscreen">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Sub-panel Quick Metadata Footer -->
+<div class="px-space-md py-2.5 bg-surface-container-low flex flex-wrap items-center justify-between gap-2 text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-primary">
+
+
+</span>
+<span class="text-outline-variant">•</span>
+
+</div>
+<div class="flex items-center gap-2 font-data-tabular">
+<span class="text-on-surface">Packet Loss: 0.00%</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-semibold">Sensor Health 99.8%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Camera Nodes Selector Grid Underneath (Interactive) -->
+<div class="bg-surface-container-lowest p-space-md lg:p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">videocam</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Camera Node Switcher</h3>
+</div>
+
+</div>
+<!-- Nodes List Grid with hover & click handlers -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md" id="nodes-health-container">
+<!-- Node 1 (CAM-01 Active by default) -->
+<button class="camera-selector-card text-left p-space-md rounded-xl border-2 border-primary bg-primary-fixed/20 shadow-sm transition-all duration-200 cursor-pointer hover:shadow-md flex flex-col justify-between gap-space-sm" id="health-node-cam-01" onclick="switchCameraFeed('cam-01')" type="button">
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-2">
+<span class="node-indicator-dot w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">CAM-01 Gateway</span>
+</div>
+<span class="node-badge px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-primary-fixed text-primary" id="badge-node-cam-01">Active</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-on-surface font-medium">Main Entrance &amp; Gate</span>
+
+</div>
+</button>
+<!-- Node 2 (CAM-02 Standby) -->
+<button class="camera-selector-card text-left p-space-md rounded-xl border-2 border-transparent bg-surface-container-low/70 hover:bg-surface-container-low transition-all duration-200 cursor-pointer hover:shadow-md flex flex-col justify-between gap-space-sm" id="health-node-cam-02" onclick="switchCameraFeed('cam-02')" type="button">
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-2">
+<span class="node-indicator-dot w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">CAM-02 Material Yard</span>
+</div>
+<span class="node-badge px-2 py-0.5 rounded font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface-variant" id="badge-node-cam-02">Standby</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-on-surface font-medium">Cement &amp; Chemicals Yard</span>
+
+</div>
+</button>
+<!-- Node 3 (CAM-03 Standby) -->
+<button class="camera-selector-card text-left p-space-md rounded-xl border-2 border-transparent bg-surface-container-low/70 hover:bg-surface-container-low transition-all duration-200 cursor-pointer hover:shadow-md flex flex-col justify-between gap-space-sm" id="health-node-cam-03" onclick="switchCameraFeed('cam-03')" type="button">
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-2">
+<span class="node-indicator-dot w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">CAM-03 Crane Loading</span>
+</div>
+<span class="node-badge px-2 py-0.5 rounded font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface-variant" id="badge-node-cam-03">Standby</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-on-surface font-medium">Work Zone Deck &amp; Crane</span>
+
+</div>
+</button>
+<!-- Node 4 (CAM-04 Standby) -->
+<button class="camera-selector-card text-left p-space-md rounded-xl border-2 border-transparent bg-surface-container-low/70 hover:bg-surface-container-low transition-all duration-200 cursor-pointer hover:shadow-md flex flex-col justify-between gap-space-sm" id="health-node-cam-04" onclick="switchCameraFeed('cam-04')" type="button">
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-2">
+<span class="node-indicator-dot w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">CAM-04 South Perimeter</span>
+</div>
+<span class="node-badge px-2 py-0.5 rounded font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface-variant" id="badge-node-cam-04">Standby</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-on-surface font-medium">Rear Exit &amp; Waste Gate</span>
+
+</div>
+</button>
+</div>
+</div>
+<!-- Notification Toast Element -->
+<div class="fixed bottom-6 right-6 z-50 transform transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 translate-y-24 opacity-0" id="action-toast">
+<span class="material-symbols-outlined text-primary-fixed" id="toast-icon">warning</span>
+<span class="font-body-md text-body-md" id="toast-msg">Switched stream feed</span>
+</div>
+<!-- Simple Register Modal (Secondary Action) -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden items-center justify-center p-4" id="register-modal">
+<div class="bg-surface-container-lowest max-w-md w-full rounded-2xl shadow-2xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Register RTSP Stream</h4>
+<button class="p-1 rounded-full hover:bg-surface-container-low text-on-surface-variant" onclick="triggerRegisterModal(false)">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-3">
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-medium">Camera Name</span>
+<input class="px-3 py-2 bg-surface-container-lowest rounded-lg border border-outline-variant/50 focus:outline-none focus:border-secondary font-body-md text-body-md" placeholder="e.g. Tower Crane B Top-View" type="text">
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-medium">RTSP / WebRTC Stream Endpoint</span>
+<input class="px-3 py-2 bg-surface-container-lowest rounded-lg border border-outline-variant/50 focus:outline-none focus:border-secondary font-data-tabular text-data-tabular" type="text" value="rtsp://node-delhi-03.buildguard.local:554/live/ch1">
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-medium">Zone Allocation</span>
+<select class="px-3 py-2 bg-surface-container-lowest rounded-lg border border-outline-variant/50 focus:outline-none focus:border-secondary font-body-md text-body-md">
+<option>Residential Tower A - Core Structure</option>
+<option>East Perimeter &amp; Cement Silo</option>
+<option>Heavy Vehicle Staging Area</option>
+</select>
+</label>
+</div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-lg text-label-lg font-medium text-on-surface" onclick="triggerRegisterModal(false)">Cancel</button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary transition-colors" onclick="saveNewStream()">Confirm Registration</button>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md"></footer>
+<script>
+  // Camera data definitions for interactive switching
+  const cameraFeeds = {
+    "cam-01": {
+      code: "CAM-01",
+      title: "Main Entrance & Inbound Gate",
+      location: "North Gate Perimeter",
+      nodeLabel: "Gateway Node • Residential Tower A",
+      resolution: "1080p 30fps",
+      bandwidth: "4.2 Mbps",
+      aiStatus: "AI Edge Inspection Online",
+      syncStatus: "Stream Sync OK (30 FPS)",
+      ptzStatus: "PTZ Pan: 42° Tilt: -12°",
+      bgUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBxoahNotBJ4y0YJiCO_E_B-51xZ17trVBzKXfFSCNRIjZfHXUJlQVC4ggYzvf-1T8asHYjSayPR9WVP6_5_rO-ZJOfB_MxqyOeW8xxcjHvq6K__H7faBfkAkX9x8XUambM3ZDQxU_kvA8GTuUvteM4iMNdNC2Q5wQI8PT8xPHyRVEQ4_RklUKDtDCGqgTFmXrVs1WPx0zxOGyeN86R06qLCBzADBeXlUCe3uIZl9Q6eOs6-UVs8KIU",
+      overlaysHtml: `
+        <div class="absolute top-1/4 left-1/3 w-72 h-44 border-2 border-secondary-container/90 rounded bg-secondary/10 pointer-events-none z-10 flex flex-col justify-between p-1.5 shadow-lg">
+          <div class="flex items-center justify-between bg-on-secondary-fixed/90 px-1.5 py-0.5 rounded text-white font-data-tabular text-label-sm">
+            <span class="font-bold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+              [Truck MH-12-BQ]
+            </span>
+            <span class="text-secondary-fixed font-semibold">Inbound Verified</span>
+          </div>
+          <div class="self-end bg-inverse-surface/90 text-on-primary-container px-2 py-0.5 rounded font-label-sm text-label-sm flex items-center gap-1">
+            <span class="material-symbols-outlined text-[12px] text-primary-fixed">verified</span>
+            RFID #8849-OK
+          </div>
+        </div>
+        <div class="absolute bottom-1/4 right-1/4 w-48 h-32 border-2 border-primary-fixed/80 rounded bg-primary/10 pointer-events-none z-10 flex flex-col justify-between p-1.5">
+          <div class="bg-on-primary-fixed/90 px-1.5 py-0.5 rounded text-white font-data-tabular text-label-sm flex items-center justify-between">
+            <span class="font-semibold">[Cement Pallet: 100 bags]</span>
+            <span class="text-primary-fixed">98% match</span>
+          </div>
+          <div class="bg-inverse-surface/85 text-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm">
+            Weight: 5.0 MT Normal
+          </div>
+        </div>
+      `
+    },
+    "cam-02": {
+      code: "CAM-02",
+      title: "Material Storage Yard (Cement & Chemicals)",
+      location: "Covered Shed Zone C",
+      nodeLabel: "Node MUM-02 • Central Logistics",
+      resolution: "1080p 30fps",
+      bandwidth: "3.8 Mbps",
+      aiStatus: "AI Stockpile & PPE Scan Active",
+      syncStatus: "Stream Sync OK (30 FPS)",
+      ptzStatus: "PTZ Pan: 118° Tilt: -28°",
+      bgUrl: "https://images.unsplash.com/photo-1541888946425-d0fbb18615f3?auto=format&fit=crop&w=1600&q=80",
+      overlaysHtml: `
+        <div class="absolute top-1/4 left-1/4 w-64 h-40 border-2 border-primary-fixed/90 rounded bg-primary/10 pointer-events-none z-10 flex flex-col justify-between p-2 shadow-lg">
+          <div class="flex items-center justify-between bg-inverse-surface/90 px-2 py-0.5 rounded text-white font-data-tabular text-label-sm">
+            <span class="font-bold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+              [Cement Stack: 420 Bags]
+            </span>
+            <span class="text-primary-fixed font-semibold">Tarp Protected</span>
+          </div>
+          <div class="bg-inverse-surface/85 text-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm self-start">
+            Grade 53 OPC • In Stock
+          </div>
+        </div>
+        <div class="absolute bottom-1/3 right-1/3 w-56 h-36 border-2 border-secondary-container/90 rounded bg-secondary/15 pointer-events-none z-10 flex flex-col justify-between p-2">
+          <div class="flex items-center justify-between bg-inverse-surface/90 px-2 py-0.5 rounded text-white font-data-tabular text-label-sm">
+            <span class="font-semibold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[13px] text-secondary-container">shield</span>
+              [PPE Detection: OK]
+            </span>
+          </div>
+          <div class="bg-inverse-surface/85 text-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm">
+            2 Handlers • Helmets &amp; Gloves Verified
+          </div>
+        </div>
+      `
+    },
+    "cam-03": {
+      code: "CAM-03",
+      title: "Work Zone Deck & Crane Loading",
+      location: "Tower A Core - Floor 4",
+      nodeLabel: "Node MUM-03 • Core Structure Mast",
+      resolution: "1080p 25fps",
+      bandwidth: "4.0 Mbps",
+      aiStatus: "AI Crane Hoist & Fall Hazard Active",
+      syncStatus: "Stream Sync OK (25 FPS)",
+      ptzStatus: "PTZ Pan: 240° Tilt: +15°",
+      bgUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
+      overlaysHtml: `
+        <div class="absolute top-1/5 right-1/4 w-72 h-48 border-2 border-primary-container rounded bg-primary-container/15 pointer-events-none z-10 flex flex-col justify-between p-2 shadow-lg">
+          <div class="flex items-center justify-between bg-inverse-surface/90 px-2 py-0.5 rounded text-white font-data-tabular text-label-sm">
+            <span class="font-bold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              [Tower Crane #1 Hoist]
+            </span>
+            <span class="text-primary-fixed font-semibold">Load: 3.2 MT</span>
+          </div>
+          <div class="bg-inverse-surface/85 text-surface-container-highest px-2 py-0.5 rounded font-label-sm text-label-sm self-end">
+            Slew Speed: 0.6 RPM • Wind: 8 kn
+          </div>
+        </div>
+        <div class="absolute bottom-1/4 left-1/3 w-64 h-32 border-2 border-secondary-container/90 rounded bg-secondary/15 pointer-events-none z-10 flex flex-col justify-between p-1.5">
+          <div class="bg-inverse-surface/90 px-2 py-0.5 rounded text-white font-data-tabular text-label-sm flex items-center justify-between">
+            <span class="font-semibold">[Rebar Mesh Perimeter]</span>
+            <span class="text-secondary-fixed">Floor 4 Deck</span>
+          </div>
+          <div class="bg-inverse-surface/85 text-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm">
+            Safety Netting Verified Active
+          </div>
+        </div>
+      `
+    },
+    "cam-04": {
+      code: "CAM-04",
+      title: "Rear Exit & Waste Gate",
+      location: "South Perimeter Exit",
+      nodeLabel: "Node MUM-04 • South Egress Checkpoint",
+      resolution: "1080p 30fps",
+      bandwidth: "4.5 Mbps",
+      aiStatus: "AI Perimeter Intrusion & ANPR Ready",
+      syncStatus: "Stream Sync OK (30 FPS)",
+      ptzStatus: "PTZ Pan: 180° Tilt: -05°",
+      bgUrl: "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=1600&q=80",
+      overlaysHtml: `
+        <div class="absolute top-1/3 left-1/4 w-80 h-44 border-2 border-error/90 rounded bg-error/15 pointer-events-none z-10 flex flex-col justify-between p-2 shadow-lg">
+          <div class="flex items-center justify-between bg-inverse-surface/90 px-2 py-0.5 rounded text-white font-data-tabular text-label-sm">
+            <span class="font-bold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+              [Unauthorized Movement Alert]
+            </span>
+            <span class="text-error font-semibold">Flagged</span>
+          </div>
+          <div class="bg-inverse-surface/85 text-surface-container-highest px-2 py-1 rounded font-label-sm text-label-sm flex items-center justify-between">
+            <span>Dumper Truck [MH-14-AX]</span>
+            <span class="text-primary-fixed">Undercarriage Clear</span>
+          </div>
+        </div>
+        <div class="absolute bottom-1/4 right-1/4 w-52 h-28 border-2 border-secondary-container/90 rounded bg-secondary/10 pointer-events-none z-10 flex flex-col justify-between p-1.5">
+          <div class="bg-inverse-surface/90 px-1.5 py-0.5 rounded text-white font-data-tabular text-label-sm flex items-center justify-between">
+            <span class="font-semibold">[Waste Debris Bin #3]</span>
+            <span class="text-secondary-fixed">80% Cap</span>
+          </div>
+          <div class="bg-inverse-surface/85 text-surface-container-highest px-1.5 py-0.5 rounded font-label-sm text-label-sm">
+            Scheduled pickup: 17:30
+          </div>
+        </div>
+      `
+    }
+  };
+
+  let primaryZoom = 1.0;
+  let activeCameraKey = "cam-01";
+
+  function switchCameraFeed(camKey) {
+    const data = cameraFeeds[camKey];
+    if (!data) return;
+
+    activeCameraKey = camKey;
+
+    // Update main camera header
+    document.getElementById("main-cam-code").textContent = data.code;
+    document.getElementById("main-cam-title").textContent = data.title;
+    document.getElementById("main-cam-location").textContent = data.location;
+    document.getElementById("main-cam-res").textContent = data.resolution;
+    document.getElementById("main-cam-bandwidth").textContent = data.bandwidth;
+
+    // Update feed background & labels
+    const bgEl = document.getElementById("main-feed-bg");
+    if (bgEl) {
+      bgEl.style.backgroundImage = `url('${data.bgUrl}')`;
+    }
+    document.getElementById("main-feed-node-label").textContent = data.nodeLabel;
+    document.getElementById("main-ai-flag").textContent = data.aiStatus;
+    document.getElementById("main-sync-status").textContent = data.syncStatus;
+    document.getElementById("main-ptz-status").textContent = data.ptzStatus;
+
+    // Replace bounding boxes overlay
+    const boxesContainer = document.getElementById("main-bounding-boxes");
+    if (boxesContainer) {
+      boxesContainer.innerHTML = data.overlaysHtml;
+    }
+
+    // Reset zoom display
+    primaryZoom = 1.0;
+    const zoomLabel = document.getElementById("primary-zoom-label");
+    if (zoomLabel) zoomLabel.textContent = "1.0x";
+    if (bgEl) bgEl.style.transform = "scale(1)";
+
+    // Update bottom selector cards
+    ["cam-01", "cam-02", "cam-03", "cam-04"].forEach(key => {
+      const card = document.getElementById(`health-node-${key}`);
+      const badge = document.getElementById(`badge-node-${key}`);
+      const dot = card ? card.querySelector(".node-indicator-dot") : null;
+
+      if (!card || !badge) return;
+
+      if (key === camKey) {
+        // Active style
+        card.className = "camera-selector-card text-left p-space-md rounded-xl border-2 border-primary bg-primary-fixed/20 shadow-sm transition-all duration-200 cursor-pointer hover:shadow-md flex flex-col justify-between gap-space-sm";
+        badge.className = "node-badge px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-primary-fixed text-primary";
+        badge.textContent = "Active";
+        if (dot) {
+          dot.className = "node-indicator-dot w-2.5 h-2.5 rounded-full bg-primary-container";
+        }
+      } else {
+        // Standby style
+        card.className = "camera-selector-card text-left p-space-md rounded-xl border-2 border-transparent bg-surface-container-low/70 hover:bg-surface-container-low transition-all duration-200 cursor-pointer hover:shadow-md flex flex-col justify-between gap-space-sm";
+        badge.className = "node-badge px-2 py-0.5 rounded font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface-variant";
+        badge.textContent = "Standby";
+        if (dot) {
+          dot.className = "node-indicator-dot w-2.5 h-2.5 rounded-full bg-tertiary";
+        }
+      }
+    });
+
+    showToast(`Switched active feed to ${data.code} • ${data.title}`, "videocam");
+  }
+
+  function adjustPrimaryZoom(dir) {
+    primaryZoom = Math.min(3.0, Math.max(1.0, primaryZoom + dir * 0.5));
+    const label = document.getElementById("primary-zoom-label");
+    if (label) label.textContent = `${primaryZoom.toFixed(1)}x`;
+    const bg = document.getElementById("main-feed-bg");
+    if (bg) bg.style.transform = `scale(${primaryZoom})`;
+    showToast(`PTZ Zoom adjusted to ${primaryZoom.toFixed(1)}x`, "zoom_in");
+  }
+
+  function selectGridLayout(cols, label) {
+    const labelEl = document.getElementById('current-grid-layout-label');
+    if (labelEl) labelEl.textContent = label;
+
+    const menu = document.getElementById('grid-layout-menu');
+    if (menu) menu.classList.add('hidden');
+
+    document.querySelectorAll('.grid-opt-check').forEach(chk => {
+      if (chk.getAttribute('data-grid') === String(cols)) {
+        chk.classList.remove('hidden');
+      } else {
+        chk.classList.add('hidden');
+      }
+    });
+
+    const grid = document.getElementById('cctv-grid');
+    if (grid) {
+      grid.classList.remove('grid-cols-1', 'lg:grid-cols-2', 'xl:grid-cols-3', 'lg:grid-cols-4', 'lg:grid-cols-5');
+      if (cols === 1) {
+        grid.classList.add('grid-cols-1');
+      } else if (cols === 2) {
+        grid.classList.add('grid-cols-1', 'lg:grid-cols-2');
+      } else if (cols === 3) {
+        grid.classList.add('grid-cols-1', 'lg:grid-cols-2', 'xl:grid-cols-3');
+      } else if (cols >= 4) {
+        grid.classList.add('grid-cols-2', 'lg:grid-cols-4');
+      }
+    }
+
+    showToast(`Grid layout switched to ${label}`, 'grid_view');
+  }
+
+  // Close grid layout menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('grid-layout-dropdown-wrapper');
+    const menu = document.getElementById('grid-layout-menu');
+    if (dropdown && menu && !dropdown.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+
+  function updateSurveillanceClocks() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeStr = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} IST`;
+
+    document.querySelectorAll('.live-clock').forEach(clock => {
+      clock.textContent = timeStr;
+    });
+  }
+
+  function toggleAudio(btn) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (icon.textContent === 'volume_off') {
+      icon.textContent = 'volume_up';
+      btn.classList.add('bg-primary-container', 'text-on-primary');
+      showToast("Audio stream unmuted", "volume_up");
+    } else {
+      icon.textContent = 'volume_off';
+      btn.classList.remove('bg-primary-container', 'text-on-primary');
+      showToast("Audio feed muted", "volume_off");
+    }
+  }
+
+  function captureSnapshot(camName) {
+    showToast(`Snapshot captured: ${camName}`, "photo_camera");
+  }
+
+  function takeAllSnapshots() {
+    showToast("Batch snapshot captured across all connected feeds", "photo_library");
+  }
+
+  function addCameraStream() {
+    triggerRegisterModal(true);
+  }
+
+  function toggleFullscreen(elementId) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    if (!document.fullscreenElement) {
+      el.requestFullscreen().catch(() => {
+        showToast("Fullscreen mode engaged", "fullscreen");
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
+  function triggerRegisterModal(open = true) {
+    const modal = document.getElementById("register-modal");
+    if (open) {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    } else {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  }
+
+  function saveNewStream() {
+    triggerRegisterModal(false);
+    showToast("RTSP Channel handshake verified. Added to registry queue.", "cloud_done");
+  }
+
+  function showToast(message, iconName = "info") {
+    const toast = document.getElementById("action-toast");
+    const msg = document.getElementById("toast-msg");
+    const icon = document.getElementById("toast-icon");
+
+    if (!toast || !msg || !icon) return;
+
+    msg.textContent = message;
+    icon.textContent = iconName;
+
+    toast.classList.remove("translate-y-24", "opacity-0");
+    toast.classList.add("translate-y-0", "opacity-100");
+
+    setTimeout(() => {
+      toast.classList.remove("translate-y-0", "opacity-100");
+      toast.classList.add("translate-y-24", "opacity-0");
+    }, 2800);
+  }
+
+  // Initialize clock ticker
+  updateSurveillanceClocks();
+  setInterval(updateSurveillanceClocks, 1000);
+</script>
+
+
+
+
+</body></html>

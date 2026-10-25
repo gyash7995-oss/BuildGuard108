@@ -1,0 +1,307 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>Site Alert &amp; Verification Queue - BuildGuard AI</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#001d31","surface-container-lowest":"#ffffff","on-error-container":"#93000a","primary-container":"#15803d","tertiary":"#4f576d","on-error":"#ffffff","tertiary-fixed-dim":"#bec6e0","error":"#ba1a1a","surface-bright":"#f8f9ff","on-primary-fixed":"#00210a","on-primary-container":"#d3ffd5","on-primary":"#ffffff","outline":"#6f7a6e","primary":"#00652c","surface-container-highest":"#d3e4fe","on-background":"#0b1c30","outline-variant":"#becabc","on-tertiary-fixed-variant":"#3f465c","on-surface-variant":"#3f493f","tertiary-fixed":"#dae2fd","on-surface":"#0b1c30","secondary-fixed":"#cce5ff","inverse-surface":"#213145","primary-fixed-dim":"#79db8d","error-container":"#ffdad6","on-secondary-container":"#00476e","inverse-primary":"#79db8d","on-tertiary-container":"#f2f3ff","secondary":"#006398","on-tertiary":"#ffffff","tertiary-container":"#676f86","on-secondary-fixed-variant":"#004b73","surface-variant":"#d3e4fe","surface-dim":"#cbdbf5","secondary-fixed-dim":"#93ccff","surface-tint":"#006d30","surface-container-low":"#eff4ff","secondary-container":"#5bb8fe","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#005323","primary-fixed":"#95f8a7","background":"#f8f9ff","surface":"#f8f9ff","surface-container":"#e5eeff","on-tertiary-fixed":"#131b2e","on-secondary":"#ffffff","surface-container-high":"#dce9ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","margin-tablet":"1.5rem","space-xs":"0.25rem",margin:"1rem","space-xl":"2.25rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-sm":"0.5rem",gutter:"1rem","gutter-tablet":"1.25rem"},fontFamily:{"data-tabular":["Inter","monospace"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter","sans-serif"],"headline-sm":["Plus Jakarta Sans","sans-serif"],"label-md":["Inter","sans-serif"],"body-lg":["Inter","sans-serif"],"label-sm":["Inter","sans-serif"],"headline-lg":["Plus Jakarta Sans","sans-serif"],"headline-xl":["Plus Jakarta Sans","sans-serif"],"body-sm":["Inter","sans-serif"],"headline-md":["Plus Jakarta Sans","sans-serif"],"label-lg":["Inter","sans-serif"],"headline-xl-mobile":["Plus Jakarta Sans"]},fontSize:{"data-tabular":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg-mobile":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0",fontWeight:"400"}],"headline-sm":["1rem",{lineHeight:"1.375rem",letterSpacing:"0",fontWeight:"600"}],"label-md":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0",fontWeight:"400"}],"headline-md":["1.25rem",{lineHeight:"1.625rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-lg":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"headline-xl-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"700"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 p-3 lg:px-margin-desktop flex justify-center pointer-events-none"><div class="h-16 w-full max-w-[1720px] px-space-md lg:px-margin-desktop flex items-center justify-between gap-space-md bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant/30 pointer-events-auto"><div class="flex items-center gap-2 flex-shrink-0"><a class="font-headline-sm text-headline-sm text-[#0b1c30] tracking-tight font-bold flex items-center gap-1.5 focus:outline-none" data-path="dashboard" href="#"><span class="text-[#0b1c30] text-lg font-bold">BuildGuard</span><span class="text-[#006398] font-bold text-lg">AI</span><span class="inline-block w-2.5 h-2.5 rounded-full bg-[#15803d] ml-0.5"></span></a></div><nav class="hidden xl:flex items-center gap-1 bg-[#eff4ff] p-1.5 rounded-full"><a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all flex items-center text-sm font-medium" data-path="dashboard" href="#">Dashboard</a><a class="px-3.5 py-1 text-on-surface-variant hover:text-on-surface transition-all flex flex-col items-center justify-center text-xs leading-tight font-medium text-center" data-path="live-monitoring" href="#"><span class="">Live</span><span class="">Monitoring</span></a><a aria-current="page" class="px-4 py-1.5 rounded-full bg-[#15803d] text-white font-medium transition-all flex items-center gap-1.5 shadow-sm text-sm" data-path="alerts" href="#">Alerts<span class="w-5 h-5 rounded-full bg-[#ba1a1a] text-white text-xs font-bold flex items-center justify-center">3</span></a><a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all flex items-center text-sm font-medium" data-path="sitemap" href="#">Sitemap</a><a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all flex items-center text-sm font-medium" data-path="movement" href="#">Movement</a><a class="px-3.5 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all flex items-center text-sm font-medium" data-path="wastage" href="#">Wastage</a></nav><div class="flex items-center gap-3 flex-shrink-0"><div class="relative group"><button class="flex items-center gap-2 bg-[#eff4ff] hover:bg-[#e5eeff] text-on-surface px-3.5 py-1.5 rounded-full transition-colors border border-outline-variant/40" type="button"><span class="material-symbols-outlined text-[18px] text-[#006398]">apartment</span><span class="text-xs font-semibold max-w-[140px] truncate">Residential Tower A</span><span class="inline-block w-2 h-2 rounded-full bg-[#15803d]"></span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button></div><div class="relative group"><button aria-label="Notifications" class="relative p-1.5 rounded-full hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#ba1a1a] text-white text-[10px] font-bold flex items-center justify-center">3</span></button></div><div class="relative group"><button class="flex items-center gap-2.5 p-1 rounded-full hover:bg-surface-container-low transition-colors" type="button"><div class="w-8 h-8 rounded-full bg-[#00652c] flex items-center justify-center font-bold text-white text-xs shadow-sm">RM</div><div class="hidden md:flex flex-col text-left"><span class="text-xs text-on-surface font-bold leading-tight">Rajesh M.</span><span class="text-[11px] text-on-surface-variant leading-tight">Project Director</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant hidden md:block">expand_more</span></button></div></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="p-space-md lg:p-margin-desktop space-y-5 max-w-[1720px] mx-auto w-full">
+<!-- Operational Header Bar -->
+
+<!-- Metric KPI Cards -->
+<!-- Main Operational Layout: High-Density Clean Queue Table + Forensic Side Drawer -->
+<div class="grid-cols-1 xl:grid-cols-12 gap-5 items-start">
+<!-- Left & Main: Site Alert and Verification Queue Table (8 cols on desktop) -->
+<section class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col w-full" id="view-realtime-alerts">
+<!-- Table Header and Controls -->
+<div class="p-4 border-b border-outline-variant/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-surface-container-lowest">
+  <div class="flex items-center gap-2.5">
+    <div class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></div>
+    <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">Live Verification</h2>
+    <span class="px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/20">Showing 7 Active</span>
+  </div>
+  <div class="flex items-center gap-2 self-stretch sm:self-auto">
+    <div class="flex items-center bg-surface-container-low rounded-xl p-0.5 border border-outline-variant/30 text-xs font-medium">
+      <button class="px-2.5 py-1 rounded-lg bg-surface-container-lowest font-semibold shadow-sm text-on-surface transition-all duration-150 active:scale-95 focus:outline-none" type="button">Active</button>
+      <button class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/60 transition-all duration-150 active:scale-95 focus:outline-none" type="button">Under Review</button>
+      <button class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/60 transition-all duration-150 active:scale-95 focus:outline-none" type="button">Cleared</button>
+    </div>
+    <button class="p-1.5 rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface border border-outline-variant/30 transition-all duration-150 active:scale-95 flex items-center justify-center focus:outline-none" title="Filter columns" type="button"><span class="material-symbols-outlined text-[18px]">tune</span></button>
+    <button class="p-1.5 rounded-xl hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface border border-outline-variant/30 transition-all duration-150 active:scale-95 flex items-center justify-center focus:outline-none" title="Refresh feed" type="button"><span class="material-symbols-outlined text-[18px]">refresh</span></button>
+  </div>
+</div>
+<!-- The Clean Data Table -->
+<div class="overflow-x-auto w-full">
+  <table class="w-full text-left border-collapse text-xs md:text-sm">
+    <thead class="bg-surface-container-low/70 border-b border-outline-variant/30 text-on-surface-variant font-semibold tracking-wider uppercase text-[11px]">
+      <tr>
+        <th class="py-3.5 px-4 whitespace-nowrap">Timestamp</th>
+        <th class="py-3.5 px-4 whitespace-nowrap">Incident</th>
+        <th class="py-3.5 px-4 whitespace-nowrap">Material &amp; Quantity</th>
+        <th class="py-3.5 px-4 whitespace-nowrap">Observed Vector</th>
+        <th class="py-3.5 px-4 text-right whitespace-nowrap">Estimated Exposure</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm">
+      <tr class="hover:bg-surface-container-low/50 transition-colors duration-150 border-l-4 border-l-error group cursor-pointer">
+        <td class="py-4 px-4 whitespace-nowrap">
+          <div class="flex flex-col">
+            <span class="font-data-tabular font-bold text-on-surface text-sm">14:28 IST</span>
+            <span class="text-xs text-on-surface-variant">4 mins ago</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-error text-on-error uppercase tracking-wider shadow-sm">Critical</span>
+              <span class="font-semibold text-on-surface text-sm group-hover:text-primary transition-colors">Unaccounted Outbound Lift</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col">
+            <span class="font-medium text-on-surface text-sm">OPC-53 Cement</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex items-center gap-2 text-sm text-on-surface">
+            <span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">videocam</span>
+            <div>
+              <p class="font-medium font-data-tabular">CAM-04 Exit Gate</p>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4 text-right whitespace-nowrap">
+          <div class="flex flex-col items-end">
+            <span class="font-data-tabular font-bold text-error text-base tracking-tight">₹48,500</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="hover:bg-surface-container-low/50 transition-colors duration-150 border-l-4 border-l-amber-500 group cursor-pointer">
+        <td class="py-4 px-4 whitespace-nowrap">
+          <div class="flex flex-col">
+            <span class="font-data-tabular font-bold text-on-surface text-sm">14:12 IST</span>
+            <span class="text-xs text-on-surface-variant">20 mins ago</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 uppercase tracking-wider border border-amber-200/50">Warning</span>
+              <span class="font-semibold text-on-surface text-sm group-hover:text-primary transition-colors">Missing PPE in Hoist Zone</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col">
+            <span class="font-medium text-on-surface text-sm">N/A</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex items-center gap-2 text-sm text-on-surface">
+            <span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">videocam</span>
+            <div>
+              <p class="font-medium font-data-tabular">CAM-03 Crane Loading</p>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4 text-right whitespace-nowrap">
+          <div class="flex flex-col items-end">
+            <span class="font-data-tabular font-bold text-on-surface text-base tracking-tight">₹0</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="hover:bg-surface-container-low/50 transition-colors duration-150 border-l-4 border-l-secondary group cursor-pointer">
+        <td class="py-4 px-4 whitespace-nowrap">
+          <div class="flex flex-col">
+            <span class="font-data-tabular font-bold text-on-surface text-sm">13:50 IST</span>
+            <span class="text-xs text-on-surface-variant">42 mins ago</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-100 text-blue-800 uppercase tracking-wider border border-blue-200/50">Verification</span>
+              <span class="font-semibold text-on-surface text-sm group-hover:text-primary transition-colors">Discrepancy In Challan Match</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col">
+            <span class="font-medium text-on-surface text-sm">TMT Steel 16mm</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex items-center gap-2 text-sm text-on-surface">
+            <span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">videocam</span>
+            <div>
+              <p class="font-medium font-data-tabular">CAM-01 Gate North</p>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4 text-right whitespace-nowrap">
+          <div class="flex flex-col items-end">
+            <span class="font-data-tabular font-bold text-secondary text-base tracking-tight">₹82,000</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="hover:bg-surface-container-low/50 transition-colors duration-150 border-l-4 border-l-error group cursor-pointer">
+        <td class="py-4 px-4 whitespace-nowrap">
+          <div class="flex flex-col">
+            <span class="font-data-tabular font-bold text-on-surface text-sm">12:35 IST</span>
+            <span class="text-xs text-on-surface-variant">2 hrs ago</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-error text-on-error uppercase tracking-wider shadow-sm">Critical</span>
+              <span class="font-semibold text-on-surface text-sm group-hover:text-primary transition-colors">After-Hours Gate Transit</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col">
+            <span class="font-medium text-on-surface text-sm">Red Clay Bricks</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex items-center gap-2 text-sm text-on-surface">
+            <span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">videocam</span>
+            <div>
+              <p class="font-medium font-data-tabular">CAM-02 Yard C</p>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4 text-right whitespace-nowrap">
+          <div class="flex flex-col items-end">
+            <span class="font-data-tabular font-bold text-error text-base tracking-tight">₹15,200</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="hover:bg-surface-container-low/50 transition-colors duration-150 border-l-4 border-l-amber-500 group cursor-pointer">
+        <td class="py-4 px-4 whitespace-nowrap">
+          <div class="flex flex-col">
+            <span class="font-data-tabular font-bold text-on-surface text-sm">11:15 IST</span>
+            <span class="text-xs text-on-surface-variant">3.5 hrs ago</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 uppercase tracking-wider border border-amber-200/50">Warning</span>
+              <span class="font-semibold text-on-surface text-sm group-hover:text-primary transition-colors">Wet Weather Tarp Non-Compliance</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col">
+            <span class="font-medium text-on-surface text-sm">Vitrified Tiles</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex items-center gap-2 text-sm text-on-surface">
+            <span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">videocam</span>
+            <div>
+              <p class="font-medium font-data-tabular">CAM-06 Tower Facade</p>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4 text-right whitespace-nowrap">
+          <div class="flex flex-col items-end">
+            <span class="font-data-tabular font-bold text-amber-700 text-base tracking-tight">₹34,000</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="hover:bg-surface-container-low/50 transition-colors duration-150 border-l-4 border-l-secondary group cursor-pointer">
+        <td class="py-4 px-4 whitespace-nowrap">
+          <div class="flex flex-col">
+            <span class="font-data-tabular font-bold text-on-surface text-sm">10:40 IST</span>
+            <span class="text-xs text-on-surface-variant">4 hrs ago</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-100 text-blue-800 uppercase tracking-wider border border-blue-200/50">Verification</span>
+              <span class="font-semibold text-on-surface text-sm group-hover:text-primary transition-colors">Aggregate Sand Bulk Receipt</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col">
+            <span class="font-medium text-on-surface text-sm">Coarse River Sand</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex items-center gap-2 text-sm text-on-surface">
+            <span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">videocam</span>
+            <div>
+              <p class="font-medium font-data-tabular">CAM-01 Gate North</p>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4 text-right whitespace-nowrap">
+          <div class="flex flex-col items-end">
+            <span class="font-data-tabular font-bold text-on-surface text-base tracking-tight">₹4,800</span>
+          </div>
+        </td>
+      </tr>
+      <tr class="hover:bg-surface-container-low/50 transition-colors duration-150 border-l-4 border-l-emerald-600 group cursor-pointer">
+        <td class="py-4 px-4 whitespace-nowrap">
+          <div class="flex flex-col">
+            <span class="font-data-tabular font-bold text-on-surface text-sm">09:18 IST</span>
+            <span class="text-xs text-on-surface-variant">5.5 hrs ago</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 uppercase tracking-wider border border-emerald-200/50">Resolved</span>
+              <span class="font-semibold text-on-surface text-sm group-hover:text-primary transition-colors">Forklift Speed Corridor Breach</span>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex flex-col">
+            <span class="font-medium text-on-surface text-sm">Internal Transit</span>
+          </div>
+        </td>
+        <td class="py-4 px-4">
+          <div class="flex items-center gap-2 text-sm text-on-surface">
+            <span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">videocam</span>
+            <div>
+              <p class="font-medium font-data-tabular">CAM-04 Perimeter West</p>
+            </div>
+          </div>
+        </td>
+        <td class="py-4 px-4 text-right whitespace-nowrap">
+          <div class="flex flex-col items-end">
+            <span class="font-data-tabular font-bold text-on-surface-variant text-base tracking-tight">₹0</span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- Clean Pagination Bar -->
+<div class="p-3 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant bg-surface-container-lowest">
+  <div class="flex items-center gap-2">
+    <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
+    <span class="text-xs text-on-surface-variant">Showing <span class="font-semibold text-on-surface">1-7</span> of <span class="font-semibold text-on-surface">7</span> active incidents</span>
+  </div>
+  <div class="flex items-center gap-1.5">
+    <button class="px-2.5 py-1 rounded-lg border border-outline-variant/40 bg-surface-container-low text-on-surface disabled:opacity-40 font-medium transition-all duration-150 active:scale-95 focus:outline-none" disabled="">Previous</button>
+    <button class="w-7 h-7 rounded-lg bg-primary-container text-on-primary font-bold flex items-center justify-center text-xs shadow-sm transition-all duration-150 active:scale-95 focus:outline-none">1</button>
+    <button class="w-7 h-7 rounded-lg hover:bg-surface-container-low text-on-surface font-medium flex items-center justify-center text-xs transition-all duration-150 active:scale-95 focus:outline-none">2</button>
+    <button class="w-7 h-7 rounded-lg hover:bg-surface-container-low text-on-surface font-medium flex items-center justify-center text-xs transition-all duration-150 active:scale-95 focus:outline-none">3</button>
+    <button class="w-7 h-7 rounded-lg hover:bg-surface-container-low text-on-surface font-medium flex items-center justify-center text-xs transition-all duration-150 active:scale-95 focus:outline-none">4</button>
+    <button class="px-2.5 py-1 rounded-lg border border-outline-variant/40 hover:bg-surface-container-low text-on-surface font-medium transition-all duration-150 active:scale-95 focus:outline-none">Next</button>
+  </div>
+</div>
+</section><div class="hidden flex-col gap-5 w-full" id="view-periodic-alerts"><div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4"><div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-4 shadow-sm flex items-center justify-between"><div class="space-y-1"><span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Active Automated Sweeps</span><div class="font-headline-md text-headline-md font-bold text-on-surface">6 <span class="text-xs font-normal text-on-surface-variant">Routines</span></div><div class="text-xs text-emerald-700 font-medium flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>100% On-Schedule</div></div><div class="w-11 h-11 rounded-xl bg-blue-50 text-secondary flex items-center justify-center border border-blue-200/50"><span class="material-symbols-outlined text-[24px]">schedule</span></div></div><div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-4 shadow-sm flex items-center justify-between"><div class="space-y-1"><span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Next Scheduled Run</span><div class="font-headline-md text-headline-md font-bold text-secondary font-data-tabular">14:45 <span class="text-xs font-semibold text-secondary">IST</span></div><div class="text-xs text-on-surface-variant">In 12m • Perimeter Optical Sweep</div></div><div class="w-11 h-11 rounded-xl bg-surface-container-low text-primary flex items-center justify-center border border-outline-variant/30"><span class="material-symbols-outlined text-[24px]">nest_cam_floodlight</span></div></div><div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-4 shadow-sm flex items-center justify-between"><div class="space-y-1"><span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Automation Compliance</span><div class="font-headline-md text-headline-md font-bold text-primary font-data-tabular">99.4%</div><div class="text-xs text-emerald-700 font-medium">47/47 Sweeps Executed Today</div></div><div class="w-11 h-11 rounded-xl bg-emerald-50 text-primary flex items-center justify-center border border-emerald-200/50"><span class="material-symbols-outlined text-[24px]">verified</span></div></div><div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-4 shadow-sm flex items-center justify-between"><div class="space-y-1"><span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Deviations Flagged Today</span><div class="font-headline-md text-headline-md font-bold text-amber-700 font-data-tabular">2 <span class="text-xs font-normal text-on-surface-variant">Incidents</span></div><div class="text-xs text-amber-800 font-medium">1 Resolved • 1 Under Review</div></div><div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center border border-amber-200/50"><span class="material-symbols-outlined text-[24px]">warning</span></div></div></div><section class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden flex flex-col w-full"><div class="p-4 border-b border-outline-variant/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-surface-container-lowest"><div class="flex items-center gap-2.5"><div class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></div><div><h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Periodic AI Optical Sweeps &amp; Automated Verification</h2><p class="text-xs text-on-surface-variant">Scheduled autonomous CCTV rounds, volumetric scan intervals, and perimeter lock routines</p></div></div><div class="flex items-center gap-2 self-stretch sm:self-auto"><button class="px-3 py-1.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold border border-outline-variant/30 transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">play_circle</span>Execute All Sweeps</button><button class="px-3 py-1.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all flex items-center gap-1.5 shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add_alarm</span>New Scheduled Routine</button></div></div><div class="overflow-x-auto w-full"><table class="w-full text-left border-collapse text-xs md:text-sm"><thead class="bg-surface-container-low/70 border-b border-outline-variant/30 text-on-surface-variant font-semibold tracking-wider uppercase text-[11px]"><tr class="bg-surface-container-low/70 border-b border-outline-variant/30 text-on-surface-variant font-semibold tracking-wider uppercase text-xs"><th class="py-3.5 px-4 whitespace-nowrap">Check Routine &amp; Schedule</th><th class="py-3.5 px-4 whitespace-nowrap">Frequency</th><th class="py-3.5 px-4 whitespace-nowrap">Execution Status</th><th class="py-3.5 px-4 whitespace-nowrap">Monitored Vector / Node</th><th class="py-3.5 px-4 whitespace-nowrap">Material &amp; Asset Scope</th><th class="py-3.5 px-4 whitespace-nowrap">Trigger Threshold</th><th class="py-3.5 px-4 whitespace-nowrap">Status</th><th class="py-3.5 px-4 text-right whitespace-nowrap">Actions</th></tr></thead><tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm"><tr class="hover:bg-surface-container-low/40 transition-colors border-l-4 border-l-secondary"><td class="py-4 px-4"><div class="flex flex-col"><span class="font-semibold text-on-surface text-sm">Perimeter Optical Sweep &amp; Gate Audit</span><span class="text-xs text-on-surface-variant">Routine #SWP-01 • Autonomous Optical Patrol</span></div></td><td class="py-4 px-4 whitespace-nowrap"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-secondary border border-blue-200 font-label-sm text-xs font-semibold inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">repeat</span>Every 30m</span></td><td class="py-4 px-4 whitespace-nowrap"><div class="flex flex-col"><span class="font-data-tabular font-bold text-secondary text-xs">In 12 mins (14:45 IST)</span><span class="text-[11px] text-on-surface-variant">Last: 14:15 IST (Clean)</span></div></td><td class="py-4 px-4"><div class="flex items-center gap-1.5 text-xs text-on-surface"><span class="material-symbols-outlined text-secondary text-[16px]">videocam</span><span class="font-medium">CAM-01 Gateway North &amp; CAM-04 Perimeter</span></div></td><td class="py-4 px-4"><div class="flex flex-col"><span class="text-xs font-medium text-on-surface">Perimeter Fence &amp; Vehicles</span><span class="text-[11px] text-on-surface-variant">Gate buffer &amp; vehicle transit count</span></div></td><td class="py-4 px-4"><span class="text-xs font-data-tabular text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded border border-outline-variant/20">Unregistered movement</span></td><td class="py-4 px-4 whitespace-nowrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>Running / Healthy</span></td><td class="py-4 px-4 text-right whitespace-nowrap"><div class="flex items-center justify-end gap-1.5"><button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium border border-outline-variant/30 flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">play_arrow</span>Run Now</button><button class="p-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant border border-outline-variant/30" title="Configure Schedule"><span class="material-symbols-outlined text-[16px]">settings</span></button></div></td></tr><tr class="hover:bg-surface-container-low/40 transition-colors border-l-4 border-l-amber-500"><td class="py-4 px-4"><div class="flex flex-col"><span class="font-semibold text-on-surface text-sm">Cement Storage Weather &amp; Tarp Verification</span><span class="text-xs text-on-surface-variant">Routine #SWP-02 • Moisture &amp; Shelter Integrity</span></div></td><td class="py-4 px-4 whitespace-nowrap"><span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 font-label-sm text-xs font-semibold inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">repeat</span>Hourly</span></td><td class="py-4 px-4 whitespace-nowrap"><div class="flex flex-col"><span class="font-data-tabular font-bold text-amber-700 text-xs">In 42 mins (15:15 IST)</span><span class="text-[11px] text-amber-800 font-medium">Last: 14:15 IST (Flagged)</span></div></td><td class="py-4 px-4"><div class="flex items-center gap-1.5 text-xs text-on-surface"><span class="material-symbols-outlined text-secondary text-[16px]">videocam</span><span class="font-medium">CAM-02 Central Yard B</span></div></td><td class="py-4 px-4"><div class="flex flex-col"><span class="text-xs font-medium text-on-surface">OPC-53 Cement Pallets</span><span class="text-[11px] text-on-surface-variant">Covering tarpaulins &amp; edge ties</span></div></td><td class="py-4 px-4"><span class="text-xs font-data-tabular text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 font-medium">&gt;2 Bags un-sheeted</span></td><td class="py-4 px-4 whitespace-nowrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>1 Anomaly Flagged</span></td><td class="py-4 px-4 text-right whitespace-nowrap"><div class="flex items-center justify-end gap-1.5"><button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium border border-outline-variant/30 flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">play_arrow</span>Run Now</button><button class="p-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant border border-outline-variant/30" title="Configure Schedule"><span class="material-symbols-outlined text-[16px]">settings</span></button></div></td></tr><tr class="hover:bg-surface-container-low/40 transition-colors border-l-4 border-l-secondary"><td class="py-4 px-4"><div class="flex flex-col"><span class="font-semibold text-on-surface text-sm">Rebar &amp; Structural Steel Scrappage Check</span><span class="text-xs text-on-surface-variant">Routine #SWP-03 • Cutting Bed &amp; Scrap Segregation</span></div></td><td class="py-4 px-4 whitespace-nowrap"><span class="px-2.5 py-1 rounded-full bg-blue-50 text-secondary border border-blue-200 font-label-sm text-xs font-semibold inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">repeat</span>Every 2h</span></td><td class="py-4 px-4 whitespace-nowrap"><div class="flex flex-col"><span class="font-data-tabular font-bold text-on-surface text-xs">In 1h 18m (15:50 IST)</span><span class="text-[11px] text-on-surface-variant">Last: 13:50 IST (Clean)</span></div></td><td class="py-4 px-4"><div class="flex items-center gap-1.5 text-xs text-on-surface"><span class="material-symbols-outlined text-secondary text-[16px]">videocam</span><span class="font-medium">CAM-03 Crane Deck &amp; Zone 2</span></div></td><td class="py-4 px-4"><div class="flex flex-col"><span class="text-xs font-medium text-on-surface">TMT Steel 16mm/20mm Bundles</span><span class="text-[11px] text-on-surface-variant">Scrap bin offcuts vs primary yard</span></div></td><td class="py-4 px-4"><span class="text-xs font-data-tabular text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded border border-outline-variant/20">Discrepancy &gt;0.5 MT</span></td><td class="py-4 px-4 whitespace-nowrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span>Scheduled</span></td><td class="py-4 px-4 text-right whitespace-nowrap"><div class="flex items-center justify-end gap-1.5"><button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium border border-outline-variant/30 flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">play_arrow</span>Run Now</button><button class="p-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant border border-outline-variant/30" title="Configure Schedule"><span class="material-symbols-outlined text-[16px]">settings</span></button></div></td></tr><tr class="hover:bg-surface-container-low/40 transition-colors border-l-4 border-l-secondary"><td class="py-4 px-4"><div class="flex flex-col"><span class="font-semibold text-on-surface text-sm">Bulk Aggregate &amp; Sand Volumetric Reconciliation</span><span class="text-xs text-on-surface-variant">Routine #SWP-04 • Shift Handover Volumetric LiDAR/Optical</span></div></td><td class="py-4 px-4 whitespace-nowrap"><span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-900 border border-purple-200 font-label-sm text-xs font-semibold inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timelapse</span>Shift (Every 8h)</span></td><td class="py-4 px-4 whitespace-nowrap"><div class="flex flex-col"><span class="font-data-tabular font-bold text-on-surface text-xs">In 2h 20m (17:00 IST)</span><span class="text-[11px] text-on-surface-variant">Last: 09:00 IST (Clean)</span></div></td><td class="py-4 px-4"><div class="flex items-center gap-1.5 text-xs text-on-surface"><span class="material-symbols-outlined text-secondary text-[16px]">videocam</span><span class="font-medium">CAM-01 Gate North &amp; Silo 2</span></div></td><td class="py-4 px-4"><div class="flex flex-col"><span class="text-xs font-medium text-on-surface">River Sand &amp; Aggregate Piles</span><span class="text-[11px] text-on-surface-variant">Volume estimate vs challan tally</span></div></td><td class="py-4 px-4"><span class="text-xs font-data-tabular text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded border border-outline-variant/20">Volume delta &gt;3%</span></td><td class="py-4 px-4 whitespace-nowrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span>Scheduled</span></td><td class="py-4 px-4 text-right whitespace-nowrap"><div class="flex items-center justify-end gap-1.5"><button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium border border-outline-variant/30 flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">play_arrow</span>Run Now</button><button class="p-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant border border-outline-variant/30" title="Configure Schedule"><span class="material-symbols-outlined text-[16px]">settings</span></button></div></td></tr><tr class="hover:bg-surface-container-low/40 transition-colors border-l-4 border-l-emerald-600"><td class="py-4 px-4"><div class="flex flex-col"><span class="font-semibold text-on-surface text-sm">Fuel &amp; Heavy Equipment Perimeter Log</span><span class="text-xs text-on-surface-variant">Routine #SWP-05 • Diesel Bowsers &amp; Excavator Telematics</span></div></td><td class="py-4 px-4 whitespace-nowrap"><span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-label-sm text-xs font-semibold inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">repeat</span>Twice Daily</span></td><td class="py-4 px-4 whitespace-nowrap"><div class="flex flex-col"><span class="font-data-tabular font-bold text-on-surface text-xs">In 3h 15m (17:45 IST)</span><span class="text-[11px] text-emerald-700 font-medium">Last: 06:30 IST (Approved)</span></div></td><td class="py-4 px-4"><div class="flex items-center gap-1.5 text-xs text-on-surface"><span class="material-symbols-outlined text-secondary text-[16px]">videocam</span><span class="font-medium">CAM-05 Gate 2 Inbound</span></div></td><td class="py-4 px-4"><div class="flex flex-col"><span class="text-xs font-medium text-on-surface">Diesel Tanks &amp; Backhoe Units</span><span class="text-[11px] text-on-surface-variant">Meter readings &amp; fuel nozzle state</span></div></td><td class="py-4 px-4"><span class="text-xs font-data-tabular text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded border border-outline-variant/20">Dispense without tag</span></td><td class="py-4 px-4 whitespace-nowrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>Running / Healthy</span></td><td class="py-4 px-4 text-right whitespace-nowrap"><div class="flex items-center justify-end gap-1.5"><button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium border border-outline-variant/30 flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">play_arrow</span>Run Now</button><button class="p-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant border border-outline-variant/30" title="Configure Schedule"><span class="material-symbols-outlined text-[16px]">settings</span></button></div></td></tr><tr class="hover:bg-surface-container-low/40 transition-colors border-l-4 border-l-error"><td class="py-4 px-4"><div class="flex flex-col"><span class="font-semibold text-on-surface text-sm">Unattended Machinery &amp; Crane Lock Check</span><span class="text-xs text-on-surface-variant">Routine #SWP-06 • Night Lockdown &amp; Safety Brake Engage</span></div></td><td class="py-4 px-4 whitespace-nowrap"><span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-xs font-semibold inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">bedtime</span>Daily 19:00</span></td><td class="py-4 px-4 whitespace-nowrap"><div class="flex flex-col"><span class="font-data-tabular font-bold text-on-surface text-xs">In 4h 30m (19:00 IST)</span><span class="text-[11px] text-on-surface-variant">Last: Yesterday 19:00 IST</span></div></td><td class="py-4 px-4"><div class="flex items-center gap-1.5 text-xs text-on-surface"><span class="material-symbols-outlined text-secondary text-[16px]">videocam</span><span class="font-medium">CAM-03 Crane Loading &amp; CAM-06</span></div></td><td class="py-4 px-4"><div class="flex flex-col"><span class="text-xs font-medium text-on-surface">Overhead Cranes &amp; Hoists</span><span class="text-[11px] text-on-surface-variant">Jib tie-back, hook grounding, cab lock</span></div></td><td class="py-4 px-4"><span class="text-xs font-data-tabular text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded border border-outline-variant/20">Suspended load after hours</span></td><td class="py-4 px-4 whitespace-nowrap"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span>Scheduled</span></td><td class="py-4 px-4 text-right whitespace-nowrap"><div class="flex items-center justify-end gap-1.5"><button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-medium border border-outline-variant/30 flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-[14px]">play_arrow</span>Run Now</button><button class="p-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant border border-outline-variant/30" title="Configure Schedule"><span class="material-symbols-outlined text-[16px]">settings</span></button></div></td></tr></tbody></table></div><div class="p-3 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant bg-surface-container-lowest"><div class="flex items-center gap-2"><span class="">Showing <span class="font-semibold text-on-surface">6 of 6</span> active automated routine schedules</span><span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span><span class="">Execution engine: <span class="font-semibold text-primary">Edge AI Microservices Cluster</span></span></div><div class="flex items-center gap-2"><button class="px-3 py-1 rounded-lg border border-outline-variant/30 bg-surface-container-low hover:bg-surface-container text-on-surface font-medium text-xs flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">history</span>View Execution Log</button><button class="px-3 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-medium text-xs border border-outline-variant/30 flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">tune</span>Adjust AI Sensitivity</button></div></div></section><script>function switchAlertView(view){const realtimeView=document.getElementById('view-realtime-alerts');const periodicView=document.getElementById('view-periodic-alerts');const realtimeBtn=document.getElementById('tab-btn-realtime');const periodicBtn=document.getElementById('tab-btn-periodic');const realtimeChips=document.getElementById('filter-chips-realtime');const periodicChips=document.getElementById('filter-chips-periodic');if(view==='periodic'){if(realtimeView)realtimeView.classList.add('hidden');if(periodicView){periodicView.classList.remove('hidden');periodicView.classList.add('flex');}if(realtimeChips)realtimeChips.classList.add('hidden');if(periodicChips)periodicChips.classList.remove('hidden');if(periodicBtn){periodicBtn.className='px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all flex items-center gap-2 shadow-sm bg-surface-container-lowest text-secondary border border-outline-variant/30';}if(realtimeBtn){realtimeBtn.className='px-4 py-2 rounded-lg font-label-md text-label-md font-semibold transition-all flex items-center gap-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/70';}}else{if(periodicView){periodicView.classList.add('hidden');periodicView.classList.remove('flex');}if(realtimeView)realtimeView.classList.remove('hidden');if(periodicChips)periodicChips.classList.add('hidden');if(realtimeChips)realtimeChips.classList.remove('hidden');if(realtimeBtn){realtimeBtn.className='px-4 py-2 rounded-lg font-label-md text-label-md font-bold transition-all flex items-center gap-2 shadow-sm bg-surface-container-lowest text-primary border border-outline-variant/30';}if(periodicBtn){periodicBtn.className='px-4 py-2 rounded-lg font-label-md text-label-md font-semibold transition-all flex items-center gap-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/70';}}}</script></div>
+<!-- Right Side: Forensic CCTV & Verification Inspection Drawer (4 cols desktop) -->
+</div>
+</div></main>
+
+
+
+
+
+
+
+
+</body></html>

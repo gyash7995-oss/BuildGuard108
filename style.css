@@ -1,0 +1,91 @@
+/* BuildGuard AI - Core Design System & Styling */
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(111, 122, 110, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(111, 122, 110, 0.45);
+}
+
+/* Smooth page transitions */
+.page-view {
+  transition: opacity 0.15s ease-in-out;
+}
+
+.page-view.hidden {
+  display: none !important;
+}
+
+/* Tab active transitions */
+.nav-tab-active {
+  background-color: #15803d !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Interactive hover micro-effects */
+.hover-lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* Schematic Canvas Pan & Zoom */
+#schematicCanvas {
+  transform-origin: 0 0;
+  transition: transform 0.05s ease-out;
+  cursor: grab;
+  user-select: none;
+}
+#schematicCanvas:active {
+  cursor: grabbing;
+}
+
+/* Camera Stream Scanline effect */
+.scanline-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2)
+  );
+  background-size: 100% 4px;
+}
+
+/* Pulse animation utility */
+@keyframes softPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+.soft-pulse {
+  animation: softPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

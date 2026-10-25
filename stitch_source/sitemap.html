@@ -1,0 +1,682 @@
+<!DOCTYPE html><html lang="en" style="width: 1280px; height: 1088px; overflow: hidden; position: relative;"><head></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>BuildGuard AI</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#001d31","surface-container-lowest":"#ffffff","on-error-container":"#93000a","primary-container":"#15803d","tertiary":"#4f576d","on-error":"#ffffff","tertiary-fixed-dim":"#bec6e0","error":"#ba1a1a","surface-bright":"#f8f9ff","on-primary-fixed":"#00210a","on-primary-container":"#d3ffd5","on-primary":"#ffffff","outline":"#6f7a6e","primary":"#00652c","surface-container-highest":"#d3e4fe","on-background":"#0b1c30","outline-variant":"#becabc","on-tertiary-fixed-variant":"#3f465c","on-surface-variant":"#3f493f","tertiary-fixed":"#dae2fd","on-surface":"#0b1c30","secondary-fixed":"#cce5ff","inverse-surface":"#213145","primary-fixed-dim":"#79db8d","error-container":"#ffdad6","on-secondary-container":"#00476e","inverse-primary":"#79db8d","on-tertiary-container":"#f2f3ff","secondary":"#006398","on-tertiary":"#ffffff","tertiary-container":"#676f86","on-secondary-fixed-variant":"#004b73","surface-variant":"#d3e4fe","surface-dim":"#cbdbf5","secondary-fixed-dim":"#93ccff","surface-tint":"#006d30","surface-container-low":"#eff4ff","secondary-container":"#5bb8fe","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#005323","primary-fixed":"#95f8a7","background":"#f8f9ff","surface":"#f8f9ff","surface-container":"#e5eeff","on-tertiary-fixed":"#131b2e","on-secondary":"#ffffff","surface-container-high":"#dce9ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","margin-tablet":"1.5rem","space-xs":"0.25rem",margin:"1rem","space-xl":"2.25rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-sm":"0.5rem",gutter:"1rem","gutter-tablet":"1.25rem"},fontFamily:{"data-tabular":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"]},fontSize:{"data-tabular":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg-mobile":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0",fontWeight:"400"}],"headline-sm":["1rem",{lineHeight:"1.375rem",letterSpacing:"0",fontWeight:"600"}],"label-md":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0",fontWeight:"400"}],"headline-md":["1.25rem",{lineHeight:"1.625rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-lg":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"headline-xl-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"700"}]}}}};</script><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-outline-variant/30"><div class="h-16 w-full px-6 flex items-center justify-between gap-4"><div class="flex items-center gap-1.5 flex-shrink-0"><span class="text-[18px] font-bold text-[#0b1c30] tracking-tight">BuildGuard</span><span class="text-[18px] font-bold text-[#006398] ml-0.5">AI</span><span class="inline-block w-2.5 h-2.5 rounded-full bg-[#15803d] ml-1"></span></div><nav class="hidden xl:flex items-center gap-6 bg-[#edf3fc] px-3 py-1.5 rounded-full"><a class="text-[14px] font-medium text-[#0b1c30] hover:text-primary transition-colors px-2" href="#" data-path="dashboard">Dashboard</a><a class="text-[13px] font-medium text-[#0b1c30] leading-tight text-left hover:text-primary transition-colors" href="#" data-path="live-monitoring">Live<br>Monitoring</a><a class="text-[14px] font-medium text-[#0b1c30] flex items-center gap-1 hover:text-primary transition-colors" href="#" data-path="alerts">Alerts<span class="w-4 h-4 rounded-full bg-[#ba1a1a] text-white text-[11px] font-bold flex items-center justify-center leading-none">3</span></a><a class="bg-[#15803d] text-white text-[14px] font-medium px-4 py-1.5 rounded-full shadow-sm" href="#" data-path="sitemap" aria-current="page">Sitemap</a><a class="text-[14px] font-medium text-[#0b1c30] hover:text-primary transition-colors" href="#" data-path="movement">Movement</a><a class="text-[14px] font-medium text-[#0b1c30] hover:text-primary transition-colors" href="#" data-path="wastage">Wastage</a></nav><div class="flex items-center gap-4 flex-shrink-0"><button type="button" class="flex items-center gap-2 bg-[#edf3fc] hover:bg-surface-container text-[#0b1c30] px-3.5 py-1.5 rounded-full transition-colors border border-outline-variant/20"><span class="material-symbols-outlined text-[18px] text-[#006398]">domain</span><span class="text-[13px] font-semibold">Residential Tower A</span><span class="w-2 h-2 rounded-full bg-[#15803d]"></span><span class="material-symbols-outlined text-[18px] text-[#3f493f]">expand_more</span></button><div class="relative flex items-center justify-center cursor-pointer p-1 text-[#0b1c30]"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#ba1a1a] text-white text-[10px] font-bold flex items-center justify-center leading-none">3</span></div><div class="flex items-center gap-2 pl-1 cursor-pointer"><div class="w-9 h-9 rounded-full bg-[#00652c] text-white font-bold text-[13px] flex items-center justify-center flex-shrink-0">RM</div><div class="flex flex-col text-left"><span class="text-[13px] font-bold text-[#0b1c30] leading-tight">Rajesh M.</span><span class="text-[11px] text-[#3f493f] leading-tight">Project Director</span></div><span class="material-symbols-outlined text-[18px] text-[#3f493f]">expand_more</span></div></div></div></header><main class="w-full bg-background flex-1 pt-24"><div class="flex flex-col w-full">
+<div class="px-space-md lg:px-margin-desktop py-space-md flex flex-col gap-space-md max-w-full">
+<!-- Top Action & Layer Filter Ribbon -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm relative z-30">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Blueprint &amp; Site CAD View</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2.5 w-full md:w-auto justify-end">
+<!-- Zoom & Viewport Controls -->
+<div class="inline-flex items-center bg-surface-container-low rounded-lg p-0.5 border border-outline-variant/30">
+<button aria-label="Zoom out" class="px-2.5 py-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center" onclick="adjustZoom(-15)" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="px-2 font-data-tabular text-data-tabular text-on-surface font-semibold min-w-[50px] text-center" id="zoomLevelText">97%</span>
+<button aria-label="Zoom in" class="px-2.5 py-1.5 rounded-md hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center" onclick="adjustZoom(15)" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Fit Screen & Reset -->
+<button class="px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg font-medium transition-colors flex items-center gap-1.5 border border-outline-variant/30" onclick="fitBlueprint()" title="Fit to display" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">fullscreen</span>
+<span class="hidden lg:inline">Fit Screen</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg font-medium transition-colors flex items-center gap-1.5 border border-outline-variant/30" onclick="resetBlueprint()" title="Recenter CAD origin" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">restart_alt</span>
+<span class="hidden lg:inline">Reset</span>
+</button>
+<!-- Replace File Secondary -->
+<button class="px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-medium transition-colors flex items-center gap-1.5" onclick="triggerFileInput()" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">swap_horiz</span>
+<span class="">Replace File</span>
+</button>
+<!-- Upload Blueprint Button -->
+<label class="px-4 py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-md transition-all flex items-center gap-2 active:scale-95 cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span class="">+ Upload Blueprint</span>
+<input accept=".pdf,.png,.jpg,.jpeg" class="hidden" id="blueprintUpload" onchange="handleFileUpload(event)" type="file">
+</label>
+</div>
+</div>
+<!-- Main Canvas & Inspector Deck -->
+<div class="relative w-full rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden min-h-[640px] lg:h-[720px] flex items-stretch">
+<!-- Interactive CAD Surface -->
+<div class="relative w-full h-full overflow-hidden cursor-grab active:cursor-grabbing bg-[#091522] flex items-center justify-center select-none" id="viewportContainer" onmousedown="startPan(event)" onmouseleave="endPan()" onmousemove="doPan(event)" onmouseup="endPan()">
+<!-- Blueprint Schematic Canvas Wrapper -->
+<div class="relative w-[1140px] h-[700px] transition-transform duration-150 ease-out origin-center flex-shrink-0" id="schematicCanvas" style="transform: translate(0px, 0px) scale(0.97);">
+<!-- Vector Architectural Master Blueprint Background -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewBox="0 0 1140 700" xmlns="http://www.w3.org/2000/svg">
+<!-- CAD Grid -->
+<defs>
+<pattern height="40" id="cadGrid" patternUnits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#172b44" stroke-width="0.75"></path>
+<path d="M 200 0 L 0 0 0 200" fill="none" opacity="0.6" stroke="#223e63" stroke-width="1.25"></path>
+</pattern>
+<pattern height="8" id="diagonalHatch" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" width="8">
+<line opacity="0.3" stroke="#1d4ed8" stroke-width="1" x1="0" x2="0" y1="0" y2="8"></line>
+</pattern>
+<pattern height="10" id="dangerHatch" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse" width="10">
+<line opacity="0.4" stroke="#ba1a1a" stroke-width="1.5" x1="0" x2="0" y1="0" y2="10"></line>
+</pattern>
+</defs>
+<!-- Background Grid Fill -->
+<rect fill="#0b1726" height="700" width="1140"></rect>
+<rect fill="url(#cadGrid)" height="700" width="1140"></rect>
+<!-- Perimeter Boundary Fencing -->
+<rect fill="none" height="600" rx="4" stroke="#334d6e" stroke-dasharray="8 4" stroke-width="2" width="1040" x="50" y="50"></rect>
+<text fill="#50739b" font-family="monospace" font-size="10" letter-spacing="0.1em" x="65" y="72">HIGH-VOLTAGE PERIMETER SENSOR BOUNDARY (1040m x 600m)</text>
+<!-- Access Roadways -->
+<path d="M 50 140 L 320 140 L 320 540 L 50 540" fill="none" stroke="#1c334d" stroke-linecap="round" stroke-width="48"></path>
+<path d="M 50 140 L 320 140 L 320 540 L 50 540" fill="none" stroke="#486581" stroke-dasharray="10 10" stroke-width="1.5"></path>
+<path d="M 320 340 L 1090 340" fill="none" stroke="#1c334d" stroke-linecap="round" stroke-width="44"></path>
+<path d="M 320 340 L 1090 340" fill="none" stroke="#486581" stroke-dasharray="10 10" stroke-width="1.5"></path>
+<!-- Inbound Gate Structure (North-West) -->
+<g id="zoneMainGateGraphic" style="opacity: 0.2;">
+<rect fill="#15803d" fill-opacity="0.25" height="70" stroke="#22c55e" stroke-width="1.5" width="22" x="42" y="105"></rect>
+<text fill="#86efac" font-family="monospace" font-size="11" font-weight="bold" x="18" y="96">INBOUND ACCESS GATE-01</text>
+<line stroke="#22c55e" stroke-dasharray="2 2" stroke-width="1.5" x1="50" x2="25" y1="140" y2="140"></line>
+</g>
+<!-- Outbound Gate Structure (South-East) -->
+<g id="zoneExitGateGraphic" style="opacity: 0.2;">
+<rect fill="#ba1a1a" fill-opacity="0.3" height="70" stroke="#ef4444" stroke-width="1.5" width="22" x="1076" y="305"></rect>
+<text fill="#fca5a5" font-family="monospace" font-size="11" font-weight="bold" x="965" y="296">REAR LOGISTICS GATE-02</text>
+</g>
+<!-- Zone: Tower A Main Structural Footprint -->
+<g>
+<rect fill="#15263d" height="200" stroke="#38bdf8" stroke-width="2" width="360" x="420" y="110"></rect>
+<rect fill="url(#diagonalHatch)" height="160" stroke="#38bdf8" stroke-dasharray="4 2" stroke-width="1" width="320" x="440" y="130"></rect>
+<!-- Core Columns -->
+<circle cx="450" cy="140" fill="#38bdf8" r="5"></circle>
+<circle cx="600" cy="140" fill="#38bdf8" r="5"></circle>
+<circle cx="750" cy="140" fill="#38bdf8" r="5"></circle>
+<circle cx="450" cy="280" fill="#38bdf8" r="5"></circle>
+<circle cx="600" cy="280" fill="#38bdf8" r="5"></circle>
+<circle cx="750" cy="280" fill="#38bdf8" r="5"></circle>
+<circle cx="600" cy="210" fill="none" r="18" stroke="#38bdf8" stroke-width="1.5"></circle>
+<text fill="#bae6fd" font-family="monospace" font-size="12" font-weight="bold" x="540" y="215">LIFT CORE ELEVATOR</text>
+<text fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="700" letter-spacing="0.05em" x="430" y="98">RESIDENTIAL TOWER A • SLAB LEVEL +14</text>
+<text fill="#64748b" font-family="monospace" font-size="10" x="430" y="324">DIM: 72.0m x 40.0m | POST-TENSIONED CONCRETE</text>
+</g>
+<!-- Heavy Crane Radius & Swing Zone -->
+<g id="zoneCraneGraphic" style="opacity: 0.2;">
+<circle cx="600" cy="210" fill="none" opacity="0.65" r="170" stroke="#f59e0b" stroke-dasharray="6 4" stroke-width="1"></circle>
+<line stroke="#f59e0b" stroke-linecap="round" stroke-width="3" x1="600" x2="740" y1="210" y2="100"></line>
+<circle cx="740" cy="100" fill="#f59e0b" r="6"></circle>
+<text fill="#fbbf24" font-family="monospace" font-size="10" x="752" y="104">JIB BOOM #1 (55T MAX LOAD)</text>
+<rect fill="#f59e0b" fill-opacity="0.3" height="30" stroke="#f59e0b" stroke-width="1.5" width="30" x="585" y="195"></rect>
+</g>
+<!-- Zone: Steel Rebar Fabrication Yard -->
+<g id="zoneSteelGraphic" style="opacity: 1;">
+<rect fill="#102033" height="180" stroke="#0ea5e9" stroke-width="1.5" width="220" x="420" y="420"></rect>
+<line stroke="#1e3a5f" stroke-width="2" x1="430" x2="630" y1="460" y2="460"></line>
+<line stroke="#1e3a5f" stroke-width="2" x1="430" x2="630" y1="500" y2="500"></line>
+<line stroke="#1e3a5f" stroke-width="2" x1="430" x2="630" y1="540" y2="540"></line>
+<line stroke="#1e3a5f" stroke-width="2" x1="430" x2="630" y1="580" y2="580"></line>
+<text fill="#38bdf8" font-family="monospace" font-size="12" font-weight="bold" x="432" y="445">STEEL FABRICATION YARD</text>
+<text fill="#94a3b8" font-family="monospace" font-size="10" x="432" y="475">TMT BAR BUNDLES: FE-550D</text>
+</g>
+<!-- Zone: Cement Enclosed Warehouse Shed -->
+<g id="zoneCementGraphic" style="opacity: 1;">
+<rect fill="#14261d" height="180" stroke="#22c55e" stroke-width="1.5" width="220" x="700" y="420"></rect>
+<rect fill="#15803d" fill-opacity="0.25" height="60" stroke="#16a34a" stroke-width="1" width="90" x="715" y="440"></rect>
+<rect fill="#15803d" fill-opacity="0.25" height="60" stroke="#16a34a" stroke-width="1" width="90" x="815" y="440"></rect>
+<rect fill="#15803d" fill-opacity="0.15" height="65" stroke="#16a34a" stroke-width="1" width="190" x="715" y="520"></rect>
+<text fill="#4ade80" font-family="monospace" font-size="12" font-weight="bold" x="715" y="435">CEMENT LOGISTICS SHED</text>
+<text fill="#86efac" font-family="monospace" font-size="10" x="725" y="475">PALLET STACK A (OPC 53)</text>
+<text fill="#86efac" font-family="monospace" font-size="10" x="825" y="475">PALLET STACK B</text>
+</g>
+<!-- Concrete Batching & Mortar Silo Area -->
+<g id="zoneBatchingGraphic">
+<circle cx="180" cy="380" fill="#1e293b" r="45" stroke="#64748b" stroke-width="1.5"></circle>
+<circle cx="180" cy="380" fill="none" r="30" stroke="#475569" stroke-dasharray="4 2" stroke-width="1"></circle>
+<text fill="#cbd5e1" font-family="monospace" font-size="11" font-weight="bold" x="135" y="384">BATCHING SILO</text>
+<rect fill="#121d2a" height="90" stroke="#475569" stroke-width="1" width="120" x="120" y="450"></rect>
+<text fill="#94a3b8" font-family="monospace" font-size="9" x="130" y="470">AGGREGATE HOPPERS</text>
+</g>
+<!-- Hazard Anomaly Restricted Zone Highlight -->
+<g id="dangerBoundaryGraphic">
+<rect fill="url(#dangerHatch)" height="150" stroke="#ef4444" stroke-dasharray="4 4" stroke-width="1.5" width="130" x="940" y="240"></rect>
+<text fill="#f87171" font-family="monospace" font-size="10" font-weight="bold" x="946" y="260">RESTRICTED ZONE #04</text>
+</g>
+<!-- Architectural Scale Ruler -->
+<g>
+<line stroke="#64748b" stroke-width="2" x1="880" x2="1080" y1="660" y2="660"></line>
+<line stroke="#64748b" stroke-width="2" x1="880" x2="880" y1="654" y2="666"></line>
+<line stroke="#64748b" stroke-width="1" x1="980" x2="980" y1="657" y2="663"></line>
+<line stroke="#64748b" stroke-width="2" x1="1080" x2="1080" y1="654" y2="666"></line>
+<text fill="#64748b" font-family="monospace" font-size="9" x="955" y="675">50 METERS</text>
+<text fill="#475569" font-family="monospace" font-size="10" x="60" y="675">AUTODESK BIM/REVIT REVISION: REV-04.8 | STAMPED STRUCTURAL DRAWING</text>
+</g>
+</svg>
+<!-- INTERACTIVE MARKERS LAYER -->
+<!-- Marker 1: Main Inbound Gate (CAM-01) - Green Verified -->
+<div class="pin-node group absolute left-[62px] top-[140px] -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" id="pin-cam01" onclick="openMarkerDrawer('cam01')" style="display: none;">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-8 h-8 rounded-full bg-primary/30 animate-ping"></span>
+<div class="relative flex items-center gap-1.5 bg-surface-container-lowest text-on-surface px-2.5 py-1.5 rounded-full shadow-lg border border-outline-variant/40 hover:scale-105 transition-transform">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">CAM-01</span>
+<span class="material-symbols-outlined text-[16px] text-primary">videocam</span>
+</div>
+</div>
+<!-- Marker Tooltip -->
+<div class="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 hidden group-hover:flex flex-col items-center pointer-events-none z-30">
+<div class="bg-inverse-surface text-inverse-on-surface text-[11px] font-data-tabular px-2.5 py-1 rounded shadow-md whitespace-nowrap">
+                Main Gate • Gatehouse Optical Stream
+              </div>
+</div>
+</div>
+<!-- Marker 2: Cement Shed (CAM-02) - Technical Blue -->
+<div class="pin-node group absolute left-[790px] top-[460px] -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" id="pin-cam02" onclick="openMarkerDrawer('cam02')" style="display: none;">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-7 h-7 rounded-full bg-secondary/20"></span>
+<div class="relative flex items-center gap-1.5 bg-surface-container-lowest text-on-surface px-2.5 py-1.5 rounded-full shadow-lg border border-outline-variant/40 hover:scale-105 transition-transform">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">CAM-02</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">inventory_2</span>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 hidden group-hover:flex flex-col items-center pointer-events-none z-30">
+<div class="bg-inverse-surface text-inverse-on-surface text-[11px] font-data-tabular px-2.5 py-1 rounded shadow-md whitespace-nowrap">
+                Cement Enclosed Shed • 1,420 Bags Active
+              </div>
+</div>
+</div>
+<!-- Marker 3: Crane Work Deck (CAM-03) - Amber/Orange Operator -->
+<div class="pin-node group absolute left-[600px] top-[190px] -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" id="pin-cam03" onclick="openMarkerDrawer('cam03')" style="display: none;">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-7 h-7 rounded-full bg-amber-500/20"></span>
+<div class="relative flex items-center gap-1.5 bg-surface-container-lowest text-on-surface px-2.5 py-1.5 rounded-full shadow-lg border border-outline-variant/40 hover:scale-105 transition-transform">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+<span class="font-label-md text-label-md font-bold text-on-surface">CAM-03</span>
+<span class="material-symbols-outlined text-[16px] text-amber-600">precision_manufacturing</span>
+</div>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 hidden group-hover:flex flex-col items-center pointer-events-none z-30">
+<div class="bg-inverse-surface text-inverse-on-surface text-[11px] font-data-tabular px-2.5 py-1 rounded shadow-md whitespace-nowrap">
+                Tower Crane Deck • Swing Sector 220°
+              </div>
+</div>
+</div>
+<!-- Marker 4: Rear Exit Gate (CAM-04) - Crimson Critical Alert -->
+<div class="pin-node group absolute left-[1050px] top-[340px] -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" id="pin-cam04" onclick="openMarkerDrawer('cam04')" style="display: none;">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-10 h-10 rounded-full bg-error/40 animate-ping"></span>
+<span class="absolute w-6 h-6 rounded-full bg-error/20"></span>
+<div class="relative flex items-center gap-1.5 bg-error text-on-error px-2.5 py-1.5 rounded-full shadow-xl hover:scale-110 transition-transform">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest animate-pulse"></span>
+<span class="font-label-md text-label-md font-bold tracking-tight">CAM-04 ANOMALY</span>
+<span class="material-symbols-outlined text-[16px]">warning</span>
+</div>
+</div>
+<div class="absolute right-0 top-full mt-1.5 hidden group-hover:flex flex-col items-end pointer-events-none z-30">
+<div class="bg-error text-on-error text-[11px] font-data-tabular px-3 py-1.5 rounded-lg shadow-xl font-semibold whitespace-nowrap">
+                Unauthorized Movement • 14 mins ago
+              </div>
+</div>
+</div>
+<!-- Auxiliary Tagged Zones -->
+<div class="pin-node absolute left-[520px] top-[510px] -translate-x-1/2 -translate-y-1/2 pointer-events-auto cursor-pointer" id="pin-steelyard" onclick="openMarkerDrawer('steel')" style="display: block;">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-low/90 text-on-surface font-label-sm text-[10px] border border-outline-variant/30 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[12px] text-secondary">grid_view</span>
+<span class="">Rebar Staging B</span>
+</div>
+</div>
+</div>
+<!-- Floating Blueprint Navigation Compass & Coordinates HUD -->
+
+<!-- Floating Reset Quick Tag -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md rounded-lg px-2.5 py-1 shadow-sm border border-outline-variant/20 text-on-surface-variant font-label-sm text-[11px] flex items-center gap-1.5 pointer-events-none">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="">Vector CAD Mode • Pan with drag</span>
+</div>
+</div>
+<!-- Compact Drawer Panel for Pin Inspection -->
+<aside class="hidden absolute top-0 right-0 w-full sm:w-96 h-full bg-surface-container-lowest shadow-2xl border-l border-outline-variant/30 z-30 flex-col overflow-y-auto transform transition-all duration-300" id="inspectorDrawer">
+<!-- Drawer Header -->
+<div class="p-space-md border-b border-surface-container-high flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center" id="drawerIconWrap">
+<span class="material-symbols-outlined text-[18px]" id="drawerHeaderIcon">videocam</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight" id="drawerTitle">CAM-01: Main Gate</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant block" id="drawerSubtitle">Optical AI Stream • 1080p 30fps</span>
+</div>
+</div>
+<button aria-label="Close inspector" class="p-1 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeMarkerDrawer()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Content Body -->
+<div class="p-space-md flex flex-col gap-space-md flex-1">
+<!-- Live Telemetry Badge Strip -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse" id="drawerStatusDot"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary" id="drawerStatusText">Live • Monitoring Active</span>
+</div>
+<span class="font-data-tabular text-[11px] text-tertiary" id="drawerLatency">14ms latency</span>
+</div>
+<!-- Video Simulation / Visual Asset Block -->
+<div class="rounded-xl overflow-hidden bg-black relative group shadow-sm">
+<img class="w-full h-44 object-cover" data-alt="High angle construction gate security camera footage during day, concrete mixer truck entering boom barrier, construction workers wearing high visibility vests and hard hats, architectural framing and dust-free paved haul road." id="drawerImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZeUIa7K4hmfa4lFjyPz6YS7OSrDLvvgzzEqc1zxvDR2PZM-iq_ZO6NhOi78Puy0gHFsU7UW4IMI9PLMdyH0pTyvjta7Sj3Q9VAuHg3ZBXYgxwtRwyeWBmGR-mdoSG9PfMqRUfCr9oB7q-YtyFwFa1RQ3-LxEtbZd14ILiUMXUBxcOFZcMNCRqpRll1kQhmItzXMIN3NVsbuAV8MA0hqJ6qYKAIFdgKs5yX15215ObdgX8clYqwtXh">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-between p-3 pointer-events-none">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-black/60 text-white font-data-tabular text-[10px] tracking-widest font-mono">REC 00:48:19</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-[10px] font-bold">AI OBJECT DETECT</span>
+</div>
+<div class="text-white font-data-tabular text-[11px] flex items-center justify-between">
+<span id="drawerCameraTag" class="">CAM-01 [NORTH GATE]</span>
+<span id="drawerFps" class="">29.97 FPS</span>
+</div>
+</div>
+</div>
+<!-- Key Metrics Tabular Grid -->
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Daily Movements</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5" id="drawerDailyMovements">38 Vehicles</span>
+<span class="font-label-sm text-[10px] text-primary font-semibold flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>+12% vs yesterday
+              </span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Flagged Anomalies</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5" id="drawerAnomaliesCount">0 Clean</span>
+<span class="font-label-sm text-[10px] text-tertiary mt-0.5" id="drawerAnomalySubtext">No perimeter breaches</span>
+</div>
+</div>
+<!-- Recent Material Activity Log -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Recent Site Movement Log</span>
+<span class="font-label-sm text-label-sm text-secondary hover:underline cursor-pointer">Export CSV</span>
+</div>
+<div class="flex flex-col gap-1.5" id="drawerLogsList">
+<!-- Item 1 -->
+<div class="p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+</div>
+<div>
+<div class="font-semibold text-on-surface text-[12px]">RMC Batch #4928</div>
+<div class="text-[10px] text-tertiary">UltraTech Transit Mixer (MH-12-EQ-9011)</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-data-tabular font-medium text-[11px] text-on-surface">11:42 AM</div>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] font-bold">VERIFIED</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[14px]">inventory</span>
+</div>
+<div>
+<div class="font-semibold text-on-surface text-[12px]">TMT Rebar 16mm Delivery</div>
+<div class="text-[10px] text-tertiary">Tata Tiscon • 14.2 Metric Tons</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-data-tabular font-medium text-[11px] text-on-surface">10:15 AM</div>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] font-bold">VERIFIED</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[14px]">person_check</span>
+</div>
+<div>
+<div class="font-semibold text-on-surface text-[12px]">Subcontractor Shift Entry</div>
+<div class="text-[10px] text-tertiary">Shiv Shakti Formworks (42 crew)</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-data-tabular font-medium text-[11px] text-on-surface">08:00 AM</div>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] font-bold">VERIFIED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button Panel -->
+<div class="pt-2 flex items-center gap-2 mt-auto">
+<button class="flex-1 bg-secondary text-on-secondary font-label-lg text-label-lg py-2.5 rounded-xl hover:bg-on-secondary-container transition-colors shadow-sm flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+<span class="">Full Video Feed</span>
+</button>
+<button class="p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Download Snapshot" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+<!-- Bottom Blueprint Telemetry Bar & Map Legend -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm border border-outline-variant/20 flex flex-col lg:flex-row items-center justify-between gap-space-md"><div class="flex flex-col xl:flex-row items-center justify-between gap-4 w-full"><div class="flex items-center gap-3 w-full xl:w-auto"><div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-[22px]">picture_as_pdf</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-2"><span class="font-label-lg text-label-lg text-on-surface font-bold truncate" id="currentFileName">Residential_Tower_A_SitePlan_Rev4.pdf</span></div><span class="font-body-sm text-body-sm text-on-surface-variant" id="currentFileMeta">4.8 MB • Uploaded 18 Oct 2026&nbsp;</span></div></div><div class="flex flex-wrap items-center justify-center gap-2 xl:gap-3 py-1 px-2"><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/30"><span class="material-symbols-outlined text-[16px] text-tertiary">square_foot</span><span class="font-label-sm text-[11px] text-on-surface-variant font-medium">Site Area:</span><span class="font-data-tabular text-[11px] font-semibold text-on-surface">in m²</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/30"><span class="material-symbols-outlined text-[16px] text-secondary">layers</span><span class="font-label-sm text-[11px] text-on-surface-variant font-medium">Layers:</span><span class="font-data-tabular text-[11px] font-semibold text-on-surface">6 of 8</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/30"><span class="material-symbols-outlined text-[16px] text-tertiary">straighten</span><span class="font-label-sm text-[11px] text-on-surface-variant font-medium">Scale:</span><span class="font-data-tabular text-[11px] font-semibold text-on-surface">1:500</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary-fixed text-on-primary-fixed border border-primary-container/20"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-[11px] font-semibold">Revit BIM Synced</span></div></div><div class="flex flex-wrap items-center gap-2 w-full xl:w-auto justify-end"><button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors border border-outline-variant/30" type="button" title="Export Blueprint"><span class="material-symbols-outlined text-[18px] text-tertiary">download</span><span class="">Export PDF / DWG</span></button><button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors border border-outline-variant/30" type="button" title="Share Blueprint with Team"><span class="material-symbols-outlined text-[18px] text-tertiary">share</span><span class="">Share</span></button></div></div></div>
+</div>
+</div>
+<script>
+  let currentZoom = 100;
+  let isPanning = false;
+  let panStartX = 0;
+  let panStartY = 0;
+  let translateX = 0;
+  let translateY = 0;
+
+  const canvasEl = document.getElementById('schematicCanvas');
+  const zoomText = document.getElementById('zoomLevelText');
+
+  function updateTransform() {
+    canvasEl.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentZoom / 100})`;
+    zoomText.textContent = `${currentZoom}%`;
+  }
+
+  function adjustZoom(delta) {
+    currentZoom = Math.min(220, Math.max(50, currentZoom + delta));
+    updateTransform();
+  }
+
+  function resetBlueprint() {
+    currentZoom = 100;
+    translateX = 0;
+    translateY = 0;
+    updateTransform();
+  }
+
+  function fitBlueprint() {
+    const container = document.getElementById('viewportContainer');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+    const scaleX = (containerWidth - 40) / 1140;
+    const scaleY = (containerHeight - 40) / 700;
+    const fitScale = Math.min(scaleX, scaleY);
+    currentZoom = Math.round(fitScale * 100);
+    translateX = 0;
+    translateY = 0;
+    updateTransform();
+  }
+
+  function startPan(e) {
+    if (e.target.closest('.pin-node') || e.target.closest('#inspectorDrawer')) return;
+    isPanning = true;
+    panStartX = e.clientX - translateX;
+    panStartY = e.clientY - translateY;
+  }
+
+  function doPan(e) {
+    if (!isPanning) return;
+    translateX = e.clientX - panStartX;
+    translateY = e.clientY - panStartY;
+    updateTransform();
+  }
+
+  function endPan() {
+    isPanning = false;
+  }
+
+  function triggerFileInput() {
+    document.getElementById('blueprintUpload').click();
+  }
+
+  function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (file) {
+      document.getElementById('currentFileName').textContent = file.name;
+      const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+      const dateStr = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+      document.getElementById('currentFileMeta').textContent = `${sizeMB} MB • Uploaded ${dateStr} • Blueprint Loaded & Aligned`;
+      resetBlueprint();
+    }
+  }
+
+  const categoryVisibility = {
+    gates: true,
+    storage: true,
+    work: true,
+    cctv: true
+  };
+
+  function toggleCategory(cat) {
+    categoryVisibility[cat] = !categoryVisibility[cat];
+    const isVisible = categoryVisibility[cat];
+
+    const filterBtnMap = {
+      gates: document.getElementById('filterGates'),
+      storage: document.getElementById('filterStorage'),
+      work: document.getElementById('filterWork'),
+      cctv: document.getElementById('filterCctv')
+    };
+
+    const targetBtn = filterBtnMap[cat];
+    if (isVisible) {
+      targetBtn.classList.remove('opacity-40', 'bg-surface-container-low', 'text-on-surface-variant');
+      targetBtn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+    } else {
+      targetBtn.classList.add('opacity-40', 'bg-surface-container-low', 'text-on-surface-variant');
+      targetBtn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+    }
+
+    if (cat === 'gates') {
+      const pin01 = document.getElementById('pin-cam01');
+      if (pin01) pin01.style.display = isVisible ? 'block' : 'none';
+      const gate1 = document.getElementById('zoneMainGateGraphic');
+      const gate2 = document.getElementById('zoneExitGateGraphic');
+      if (gate1) gate1.style.opacity = isVisible ? '1' : '0.2';
+      if (gate2) gate2.style.opacity = isVisible ? '1' : '0.2';
+    }
+
+    if (cat === 'storage') {
+      const pin02 = document.getElementById('pin-cam02');
+      const steelPin = document.getElementById('pin-steelyard');
+      const cementG = document.getElementById('zoneCementGraphic');
+      const steelG = document.getElementById('zoneSteelGraphic');
+      if (pin02) pin02.style.display = isVisible ? 'block' : 'none';
+      if (steelPin) steelPin.style.display = isVisible ? 'block' : 'none';
+      if (cementG) cementG.style.opacity = isVisible ? '1' : '0.2';
+      if (steelG) steelG.style.opacity = isVisible ? '1' : '0.2';
+    }
+
+    if (cat === 'work') {
+      const pin03 = document.getElementById('pin-cam03');
+      const craneG = document.getElementById('zoneCraneGraphic');
+      if (pin03) pin03.style.display = isVisible ? 'block' : 'none';
+      if (craneG) craneG.style.opacity = isVisible ? '1' : '0.2';
+    }
+
+    if (cat === 'cctv') {
+      const pins = ['pin-cam01', 'pin-cam02', 'pin-cam03', 'pin-cam04'];
+      pins.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = isVisible ? 'block' : 'none';
+      });
+    }
+  }
+
+  const drawerData = {
+    cam01: {
+      title: 'CAM-01: Main Gate',
+      subtitle: 'Inbound Perimeter Access Point • Optical Lens',
+      status: 'Live • Monitoring Active',
+      statusColor: 'text-primary',
+      dotColor: 'bg-primary',
+      icon: 'videocam',
+      iconWrap: 'bg-primary-container text-on-primary',
+      tag: 'CAM-01 [NORTH GATE]',
+      fps: '29.97 FPS',
+      movements: '38 Vehicles',
+      movementsTrend: '+12% vs yesterday',
+      anomalies: '0 Clean',
+      anomalySub: 'No perimeter breaches',
+      logs: [
+        { title: 'RMC Batch #4928 Inbound', desc: 'UltraTech Transit Mixer (MH-12-EQ-9011)', time: '11:42 AM', status: 'VERIFIED', type: 'local_shipping' },
+        { title: 'TMT Rebar 16mm Delivery', desc: 'Tata Tiscon • 14.2 Metric Tons', time: '10:15 AM', status: 'VERIFIED', type: 'inventory' },
+        { title: 'Subcontractor Crew In', desc: 'Shiv Shakti Formworks (42 crew)', time: '08:00 AM', status: 'VERIFIED', type: 'person_check' }
+      ]
+    },
+    cam02: {
+      title: 'CAM-02: Cement Shed',
+      subtitle: 'Covered Enclosure 103 • Moisture & Pile Tracker',
+      status: 'Stock Normal • Safe Humidity 54%',
+      statusColor: 'text-secondary',
+      dotColor: 'bg-secondary',
+      icon: 'inventory_2',
+      iconWrap: 'bg-secondary text-on-secondary',
+      tag: 'CAM-02 [CEMENT DEPOT]',
+      fps: '30.00 FPS',
+      movements: '240 Bags Moved',
+      movementsTrend: 'On schedule for Tower A Slab',
+      anomalies: '0 Spoilage',
+      anomalySub: 'Zero moisture risk alerts',
+      logs: [
+        { title: 'Transfer to Batching Silo', desc: '120 Bags OPC-53 Dispatched by Forklift #2', time: '11:10 AM', status: 'VERIFIED', type: 'forklift' },
+        { title: 'Intake Delivery Staged', desc: 'Ambuja Cement Trailer (400 Bags)', time: '09:20 AM', status: 'STOCKED', type: 'inventory_2' },
+        { title: 'Daily Inventory Count', desc: '1,420 Bags Total Active Inventory', time: '07:30 AM', status: 'AUDITED', type: 'checklist' }
+      ]
+    },
+    cam03: {
+      title: 'CAM-03: Crane Work Deck',
+      subtitle: 'Tower Crane Jib Pad • Slab Level 14',
+      status: 'Active Rigging Operations',
+      statusColor: 'text-amber-600',
+      dotColor: 'bg-amber-500',
+      icon: 'precision_manufacturing',
+      iconWrap: 'bg-amber-500 text-on-primary',
+      tag: 'CAM-03 [CRANE CABIN]',
+      fps: '30.00 FPS',
+      movements: '18 Heavy Lifts',
+      movementsTrend: 'Wind speed 12 km/h (Safe)',
+      anomalies: '0 Hazards',
+      anomalySub: 'Rigging permits fully verified',
+      logs: [
+        { title: 'Rebar Bundle Lift #18', desc: '2.8 Tons lifted to Core Shear Wall', time: '11:35 AM', status: 'VERIFIED', type: 'hardware' },
+        { title: 'Concrete Bucket Lift #17', desc: '3.0 Cubic Meters to Pour Bay 3', time: '11:02 AM', status: 'VERIFIED', type: 'architecture' },
+        { title: 'Jib Inspection Log', desc: 'Cable tension check cleared by Operator', time: '07:45 AM', status: 'VERIFIED', type: 'assignment_turned_in' }
+      ]
+    },
+    cam04: {
+      title: 'CAM-04: Rear Exit Gate',
+      subtitle: 'Secondary Perimeter Haul Road • Alert Zone',
+      status: 'CRITICAL ALERT: ANOMALY FLAGGED',
+      statusColor: 'text-error',
+      dotColor: 'bg-error',
+      icon: 'warning',
+      iconWrap: 'bg-error text-on-error',
+      tag: 'CAM-04 [REAR ACCESS]',
+      fps: '30.00 FPS',
+      movements: '4 Movements (1 Unscheduled)',
+      movementsTrend: 'Excess cement displacement',
+      anomalies: '1 Active Alert',
+      anomalySub: 'Supervisor review requested',
+      logs: [
+        { title: 'Suspicious Vehicle Outbound', desc: 'Pickup Truck carrying 45 Bags cement without manifest', time: '11:28 AM', status: 'FLAGGED', type: 'gpp_bad' },
+        { title: 'Gate Breach Sensor #04', desc: 'Sensor triggered outside designated dispatch window', time: '11:26 AM', status: 'ALERT', type: 'sensors' },
+        { title: 'Dump Truck Cleared', desc: 'Earth removal empty departure', time: '09:50 AM', status: 'VERIFIED', type: 'check_circle' }
+      ]
+    },
+    steel: {
+      title: 'Rebar Staging Yard B',
+      subtitle: 'Fabrication & Cut-Bend Work Area',
+      status: 'Operational Normal',
+      statusColor: 'text-secondary',
+      dotColor: 'bg-secondary',
+      icon: 'grid_view',
+      iconWrap: 'bg-secondary text-on-secondary',
+      tag: 'ZONE-ST-02 [FAB YARD]',
+      fps: 'SENSOR ARRAY',
+      movements: '12 TMT Bundles Cut',
+      movementsTrend: 'Efficiency at 98.4%',
+      anomalies: '0 Deviations',
+      anomalySub: 'Wastage rate 0.9% (Below 2% threshold)',
+      logs: [
+        { title: 'Beam Rebar Cage Complete', desc: 'Grid C-4 to C-8 Shear Reinforcement', time: '10:55 AM', status: 'VERIFIED', type: 'construction' },
+        { title: 'Off-cut Scrap Logged', desc: '42 kg scrap routed to bin #3', time: '09:40 AM', status: 'VERIFIED', type: 'recycling' }
+      ]
+    }
+  };
+
+  function openMarkerDrawer(key) {
+    const data = drawerData[key];
+    if (!data) return;
+
+    document.getElementById('drawerTitle').textContent = data.title;
+    document.getElementById('drawerSubtitle').textContent = data.subtitle;
+    document.getElementById('drawerStatusText').textContent = data.status;
+    document.getElementById('drawerStatusText').className = `font-label-sm text-label-sm font-semibold ${data.statusColor}`;
+    document.getElementById('drawerStatusDot').className = `w-2 h-2 rounded-full ${data.dotColor} animate-pulse`;
+    
+    document.getElementById('drawerHeaderIcon').textContent = data.icon;
+    document.getElementById('drawerIconWrap').className = `w-8 h-8 rounded-lg flex items-center justify-center ${data.iconWrap}`;
+    
+    document.getElementById('drawerCameraTag').textContent = data.tag;
+    document.getElementById('drawerFps').textContent = data.fps;
+    document.getElementById('drawerDailyMovements').textContent = data.movements;
+    document.getElementById('drawerAnomaliesCount').textContent = data.anomalies;
+    document.getElementById('drawerAnomalySubtext').textContent = data.anomalySub;
+
+    const listContainer = document.getElementById('drawerLogsList');
+    listContainer.innerHTML = '';
+
+    data.logs.forEach(log => {
+      const isFlagged = log.status === 'FLAGGED' || log.status === 'ALERT';
+      const badgeClass = isFlagged ? 'bg-error text-on-error' : 'bg-primary-fixed text-on-primary-fixed';
+      
+      const itemEl = document.createElement('div');
+      itemEl.className = 'p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-body-sm';
+      itemEl.innerHTML = `
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 rounded ${isFlagged ? 'bg-error-container text-error' : 'bg-surface-container-highest text-secondary'} flex items-center justify-center">
+            <span class="material-symbols-outlined text-[14px]">${log.type}</span>
+          </div>
+          <div>
+            <div class="font-semibold text-on-surface text-[12px]">${log.title}</div>
+            <div class="text-[10px] text-tertiary">${log.desc}</div>
+          </div>
+        </div>
+        <div class="text-right">
+          <div class="font-data-tabular font-medium text-[11px] text-on-surface">${log.time}</div>
+          <span class="px-1.5 py-0.2 rounded ${badgeClass} font-label-sm text-[9px] font-bold">${log.status}</span>
+        </div>
+      `;
+      listContainer.appendChild(itemEl);
+    });
+
+    const drawer = document.getElementById('inspectorDrawer');
+    drawer.classList.remove('hidden');
+    drawer.classList.add('flex');
+  }
+
+  function closeMarkerDrawer() {
+    const drawer = document.getElementById('inspectorDrawer');
+    drawer.classList.add('hidden');
+    drawer.classList.remove('flex');
+  }
+
+  // Auto initialize fit on first paint
+  window.addEventListener('DOMContentLoaded', () => {
+    fitBlueprint();
+  });
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md"></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

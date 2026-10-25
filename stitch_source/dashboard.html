@@ -1,0 +1,402 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>BuildGuard AI - Dashboard</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#001d31","surface-container-lowest":"#ffffff","on-error-container":"#93000a","primary-container":"#15803d","tertiary":"#4f576d","on-error":"#ffffff","tertiary-fixed-dim":"#bec6e0","error":"#ba1a1a","surface-bright":"#f8f9ff","on-primary-fixed":"#00210a","on-primary-container":"#d3ffd5","on-primary":"#ffffff","outline":"#6f7a6e","primary":"#00652c","surface-container-highest":"#d3e4fe","on-background":"#0b1c30","outline-variant":"#becabc","on-tertiary-fixed-variant":"#3f465c","on-surface-variant":"#3f493f","tertiary-fixed":"#dae2fd","on-surface":"#0b1c30","secondary-fixed":"#cce5ff","inverse-surface":"#213145","primary-fixed-dim":"#79db8d","error-container":"#ffdad6","on-secondary-container":"#00476e","inverse-primary":"#79db8d","on-tertiary-container":"#f2f3ff","secondary":"#006398","on-tertiary":"#ffffff","tertiary-container":"#676f86","on-secondary-fixed-variant":"#004b73","surface-variant":"#d3e4fe","surface-dim":"#cbdbf5","secondary-fixed-dim":"#93ccff","surface-tint":"#006d30","surface-container-low":"#eff4ff","secondary-container":"#5bb8fe","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#005323","primary-fixed":"#95f8a7","background":"#f8f9ff","surface":"#f8f9ff","surface-container":"#e5eeff","on-tertiary-fixed":"#131b2e","on-secondary":"#ffffff","surface-container-high":"#dce9ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","margin-tablet":"1.5rem","space-xs":"0.25rem",margin:"1rem","space-xl":"2.25rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-sm":"0.5rem",gutter:"1rem","gutter-tablet":"1.25rem"},fontFamily:{"data-tabular":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"]},fontSize:{"data-tabular":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg-mobile":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0",fontWeight:"400"}],"headline-sm":["1rem",{lineHeight:"1.375rem",letterSpacing:"0",fontWeight:"600"}],"label-md":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0",fontWeight:"400"}],"headline-md":["1.25rem",{lineHeight:"1.625rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-lg":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"headline-xl-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"700"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="w-full bg-white border-b border-slate-200/80 px-6 py-2.5 flex items-center justify-between sticky top-0 z-50"><div class="flex items-center gap-6 flex-shrink-0"><a class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold flex items-center gap-1.5 focus:outline-none" data-path="dashboard" href="#"><span class="text-[#0b1c30] font-bold">BuildGuard</span> <span class="text-[#006398] font-semibold flex items-center gap-1">AI <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#22c55e]"></span></span></a></div><nav class="bg-slate-100/80 p-1 rounded-full flex items-center space-x-1 border border-slate-200/60"><a href="#" data-path="dashboard" class="px-5 py-2 rounded-full text-sm font-semibold text-white bg-emerald-700 shadow-sm transition-colors">Dashboard</a><a href="#" data-path="live-monitoring" class="px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Live Monitoring</a><a href="#" data-path="alerts" class="px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:text-slate-900 flex items-center space-x-1.5 transition-colors"><span class="">Alerts</span><span class="bg-red-600 text-white text-[11px] font-bold px-1.5 py-0.5 rounded-full leading-none">3</span></a><a href="#" data-path="sitemap" class="px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Sitemap</a><a href="#" data-path="movement" class="px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Movement</a><a href="#" data-path="wastage" class="px-4 py-2 rounded-full text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">Wastage</a></nav><div class="flex items-center gap-3.5 flex-shrink-0"><div class="flex items-center space-x-2 bg-sky-50 text-sky-900 px-3.5 py-1.5 rounded-full border border-sky-200/60 text-sm font-medium cursor-pointer"><span class="material-symbols-outlined text-[18px] text-sky-700">apartment</span><span class="">Residential Tower A</span><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="material-symbols-outlined text-[16px] text-sky-700">expand_more</span></div><div class="relative p-2 text-slate-600 hover:text-slate-900 cursor-pointer"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center leading-none">3</span></div><div class="flex items-center space-x-2.5 cursor-pointer"><div class="w-8 h-8 rounded-full bg-emerald-800 text-white font-semibold text-xs flex items-center justify-center">RM</div><div class="flex flex-col text-left"><span class="text-xs font-semibold text-slate-900 leading-tight">Rajesh M.</span><span class="text-[10px] text-slate-500 leading-tight">Project Director</span></div><span class="material-symbols-outlined text-[16px] text-slate-400">expand_more</span></div></div></header><main class="w-full bg-background flex-1"><div class="flex flex-col w-full">
+<div class="w-full px-space-md lg:px-margin-desktop py- space-y-space-md">
+<!-- Sub-Header Operations Bar -->
+<section class="mt-4 bg-surface-container-lowest rounded-xl p-3 sm:px-4 shadow-sm border border-outline-variant/20 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-3 flex-wrap">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+
+<span class="px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span> Active Surveillance 4/4 CAMs
+</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">|</span>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">Last updated: <strong class="text-on-surface font-medium">Today, 14:38 IST</strong></span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low p-1 rounded-lg">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest shadow-xs text-on-surface font-label-md text-label-md font-semibold" type="button">Today (22 Oct 2026)</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">Last 7 Days</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors flex items-center gap-1" type="button">
+
+
+</button>
+</div>
+</section>
+<!-- KPI Metric Cards Grid (4 metrics) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Material Tracked -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border flex flex-col justify-between transition-all hover:shadow-md border-outline-variant/30">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Material Tracked</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</span>
+</div>
+<div class="mt-2.5">
+<div class="flex items-baseline justify-between">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-data-tabular">14,850 <span class="font-normal text-headline-sm text-on-surface-variant">Units</span></div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified
+</span>
+</div>
+
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-xs">
+
+
+</div>
+</div>
+<!-- Card 2: Active Alerts -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border flex flex-col justify-between transition-all hover:shadow-md border-outline-variant/30" style="cursor: pointer;" onclick="const alertNav = document.querySelector('nav a[data-path=&quot;alerts&quot;]'); if(alertNav) alertNav.click();">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Active Alerts</span>
+<span class="w-8 h-8 rounded-lg bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</span>
+</div>
+<div class="mt-2.5">
+<div class="flex items-baseline justify-between">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-data-tabular">3 <span class="text-error font-semibold text-headline-sm">Unresolved</span></div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+1 Critical • 2 Warn
+</span>
+</div>
+
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between">
+
+</div>
+</div>
+<!-- Card 3: Unaccounted Movement -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border flex flex-col justify-between transition-all hover:shadow-md border-outline-variant/30" style="cursor: pointer;" onclick="const movNav = document.querySelector('nav a[data-path=&quot;movement&quot;]'); if(movNav) movNav.click();">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Unaccounted Movement</span>
+<span class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-[18px]">sync_problem</span>
+</span>
+</div>
+<div class="mt-2.5">
+<div class="flex items-baseline justify-between">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-data-tabular">16 <span class="font-normal text-headline-sm text-amber-700">Units Flagged</span></div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-semibold">
+2 Incidents
+</span>
+</div>
+
+</div>
+
+</div>
+<!-- Card 4: Estimated Wastage -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border flex flex-col justify-between transition-all hover:shadow-md border-outline-variant/30" style="cursor: pointer;" onclick="const wasNav = document.querySelector('nav a[data-path=&quot;wastage&quot;]'); if(wasNav) wasNav.click();">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Estimated Wastage</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</span>
+</div>
+<div class="mt-2.5">
+<div class="flex items-baseline justify-between">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-data-tabular">₹34,600</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+0.24% of Value
+</span>
+</div>
+
+</div>
+
+</div>
+</section>
+<!-- Material Capital Valuation & Inventory Breakdown Section -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/20 p-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pb-3 border-b border-outline-variant/20">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Material Capital Valuation&nbsp;</h2>
+<span class="px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">sync</span> Live Audit Synchronized
+</span>
+</div>
+
+</div>
+<div class="text-left lg:text-right">
+
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface font-data-tabular text-primary">₹1,42,80,000</div>
+</div>
+</div>
+<!-- 3-Column Valuation Breakdown -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-3.5">
+<div class="p-3 rounded-lg bg-surface-container-low/60 border border-outline-variant/20 flex items-start justify-between">
+<div>
+<span class="text-xs text-on-surface-variant font-medium">Received Total (Gross)</span>
+<div class="text-xl font-bold text-on-surface mt-0.5 font-data-tabular">₹1.85 Cr</div>
+<span class="text-xs text-secondary font-medium">38 Shipments Logged</span>
+</div>
+<span class="p-2 rounded-lg bg-secondary-fixed/50 text-secondary">
+<span class="material-symbols-outlined text-[18px]">input</span>
+</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low/60 border border-outline-variant/20 flex items-start justify-between">
+<div>
+<span class="text-xs text-on-surface-variant font-medium">Accounted Consumption (Verified)</span>
+<div class="text-xl font-bold text-on-surface mt-0.5 font-data-tabular">₹41.2 L</div>
+<span class="text-xs text-primary font-medium">Pouring, Slabs &amp; Framing</span>
+</div>
+<span class="p-2 rounded-lg bg-on-primary-container/80 text-primary">
+<span class="material-symbols-outlined text-[18px]">domain_verification</span>
+</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low/60 border border-outline-variant/20 flex items-start justify-between">
+<div>
+<span class="text-xs text-on-surface-variant font-medium">Remaining Inventory (Recorded)</span>
+<div class="text-xl font-bold text-on-surface mt-0.5 font-data-tabular">₹1.01 Cr</div>
+<span class="text-xs text-on-surface-variant">Current Yard &amp; Warehouses</span>
+</div>
+<span class="p-2 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px]">warehouse</span>
+</span>
+</div>
+</div>
+<!-- Visual Distribution Bar -->
+<div class="pt-2">
+
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden flex">
+<div class="bg-secondary h-2.5" style="width: 29%" title="Accounted Used: 29%"></div>
+<div class="bg-primary-container h-2.5" style="width: 69%" title="Verified In-Stock: 69%"></div>
+<div class="bg-error h-2.5" style="width: 2%" title="Unaccounted: 2%"></div>
+</div>
+</div>
+</section>
+<!-- MAIN LOWER GRID (2-column layout: Left Wide ~65%, Right Sidebar ~35%) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- LEFT COLUMN: ~65% (8 Columns) -->
+<div class="xl:col-span-8 space-y-space-md">
+<!-- Live Feed: Recent Material Movements Table -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/20 p-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">transfer_within_a_station</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Live Feed: Recent Material Movements</h2>
+<span class="px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span> Sensors Active
+</span>
+</div>
+<a class="text-secondary hover:text-on-secondary-container font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" data-path="movement" href="#">
+View All in Ledger <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="overflow-x-auto mt-2">
+<table class="w-full text-left text-xs sm:text-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg">Time</th>
+<th class="py-2.5 px-3">Material</th>
+<th class="py-2.5 px-3">Quantity</th>
+<th class="py-2.5 px-3">Direction</th>
+<th class="py-2.5 px-3">Vector / Route</th>
+<th class="py-2.5 px-3">Optical Cam</th>
+<th class="py-2.5 px-3 text-right rounded-r-lg">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-surface-container-low">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="font-data-tabular font-semibold text-on-surface">14:10</span>
+<div class="text-[11px] text-on-surface-variant">Today</div>
+</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-on-surface">Cement</div>
+
+</td>
+<td class="py-3 px-3 font-data-tabular font-medium text-on-surface">
+30 bags
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-bold text-[11px] bg-amber-100 text-amber-800">
+OUT
+</span>
+</td>
+<td class="py-3 px-3 text-on-surface text-xs font-medium">
+Central Storage → Zone 2 Deck
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-xs">CAM-03</span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Verified
+</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="font-data-tabular font-semibold text-on-surface">11:30</span>
+<div class="text-[11px] text-on-surface-variant">Today</div>
+</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-on-surface">TMT Steel 16mm</div>
+
+</td>
+<td class="py-3 px-3 font-data-tabular font-medium text-on-surface">
+20 rods
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-bold text-[11px] bg-emerald-100 text-emerald-800">
+IN
+</span>
+</td>
+<td class="py-3 px-3 text-on-surface text-xs font-medium">
+Supplier Gate → Yard B
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-xs">CAM-01</span>
+</td>
+<td class="py-3 px-3 text-right"><button type="button" onclick="this.parentElement.innerHTML = '&lt;span class=\'inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold\'&gt;&lt;span class=\'material-symbols-outlined text-[13px]\'&gt;check_circle&lt;/span&gt; Verified&lt;/span&gt;'; const scoreEl = document.getElementById('loss-prevention-score'); if(scoreEl) { scoreEl.innerText = '92'; const circle = document.getElementById('loss-score-circle'); if(circle) circle.setAttribute('stroke-dashoffset', '25.1'); const unrec = document.getElementById('unreconciled-deduction'); if(unrec) unrec.innerText = '0 pts'; }" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant hover:bg-secondary-fixed/50 font-label-sm text-label-sm font-semibold transition-colors cursor-pointer"><span class="material-symbols-outlined text-[13px]">hourglass_empty</span> Verify Now</button></td>
+</tr>
+<!-- Row 3: Flagged Discrepancy -->
+<tr class="bg-error-container/15 hover:bg-error-container/25 transition-colors">
+<td class="py-3 px-3">
+<span class="font-data-tabular font-semibold text-error">02:13</span>
+<div class="text-[11px] text-error font-medium">After-hours</div>
+</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-on-surface">Ultratech Cement</div>
+
+</td>
+<td class="py-3 px-3 font-data-tabular font-bold text-error">
+10 bags
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-bold text-[11px] bg-error text-on-error">
+OUT
+</span>
+</td>
+<td class="py-3 px-3 text-on-surface text-xs font-medium">
+Storage → Exit Gate (After-hours)
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-xs">CAM-04</span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 bg-error text-on-error hover:bg-red-700 rounded-md font-label-sm text-label-sm font-semibold transition-colors" type="button" onclick="if(confirm('Resolve flagged after-hours shipment? Optical CAM-04 timestamp verified.')){ this.parentElement.innerHTML = '&lt;span class=\'inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold\'&gt;&lt;span class=\'material-symbols-outlined text-[13px]\'&gt;check_circle&lt;/span&gt; Verified&lt;/span&gt;'; const alertScore = document.getElementById('alert-deduction'); if(alertScore) alertScore.innerText = '0 pts'; const scoreEl = document.getElementById('loss-prevention-score'); if(scoreEl) { scoreEl.innerText = '94'; const circle = document.getElementById('loss-score-circle'); if(circle) circle.setAttribute('stroke-dashoffset', '18.8'); } }"><span class="material-symbols-outlined text-[14px]">videocam</span> Review Footage</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="font-data-tabular font-semibold text-on-surface">09:15</span>
+<div class="text-[11px] text-on-surface-variant">Today</div>
+</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-on-surface">Red Clay Bricks</div>
+
+</td>
+<td class="py-3 px-3 font-data-tabular font-medium text-on-surface">
+1,200 pcs
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-bold text-[11px] bg-emerald-100 text-emerald-800">
+IN
+</span>
+</td>
+<td class="py-3 px-3 text-on-surface text-xs font-medium">
+Main Gate → Unload Pad
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-xs">CAM-01</span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Verified
+</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="font-data-tabular font-semibold text-on-surface">Yesterday</span>
+<div class="text-[11px] text-on-surface-variant">17:40 IST</div>
+</td>
+<td class="py-3 px-3">
+<div class="font-semibold text-on-surface">Vitrified Tiles</div>
+
+</td>
+<td class="py-3 px-3 font-data-tabular font-medium text-on-surface">
+45 boxes
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-bold text-[11px] bg-emerald-100 text-emerald-800">
+IN
+</span>
+</td>
+<td class="py-3 px-3 text-on-surface text-xs font-medium">
+Vendor Gate → Level 3
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-xs">CAM-02</span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Verified
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-on-surface-variant gap-2">
+
+<div class="flex items-center gap-2">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-colors" type="button">Previous</button>
+<button class="px-2 py-1 rounded bg-primary-container text-on-primary font-medium shadow-xs" type="button">1</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-colors" type="button">2</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-colors" type="button">Next</button>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: ~35% (4 Columns) -->
+<div class="xl:col-span-4 space-y-space-md">
+<!-- Loss Prevention Index Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/20 p-space-md">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Loss Prevention Index</h2>
+<p class="text-xs text-on-surface-variant">Live site risk telemetry</p>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-on-primary-container text-primary font-label-sm text-label-sm font-bold">
+OPTIMAL
+</span>
+</div>
+<div class="flex items-center justify-center py-4">
+<div class="relative w-36 h-36 flex items-center justify-center"><svg class="w-full h-full transform -rotate-90" viewBox="0 0 120 120"><circle class="text-surface-container-low stroke-current" cx="60" cy="60" fill="transparent" r="50" stroke-width="10"></circle><circle id="loss-score-circle" class="text-primary-container stroke-current transition-all" cx="60" cy="60" fill="transparent" r="50" stroke-dasharray="314.15" stroke-dashoffset="37.7" stroke-linecap="round" stroke-width="10"></circle></svg><div class="absolute flex flex-col items-center justify-center text-center"><span id="loss-prevention-score" class="font-headline-xl text-headline-xl font-bold text-on-surface tracking-tight font-data-tabular">88</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">/ 100 Score</span><span class="text-[11px] text-primary font-semibold">Low Vulnerability</span></div></div>
+</div>
+<!-- Breakdown of Contributing Risk Factors -->
+<div class="space-y-2 pt-1 border-t border-outline-variant/20"><div class="flex justify-between items-center text-xs"><span class="text-on-surface flex items-center gap-1.5 font-medium"><span class="material-symbols-outlined text-[15px] text-error">warning</span> Alert Exposure Deduction</span><span id="alert-deduction" class="font-semibold text-error font-data-tabular">-6 pts</span></div><div class="flex justify-between items-center text-xs"><span class="text-on-surface flex items-center gap-1.5 font-medium"><span class="material-symbols-outlined text-[15px] text-amber-700">sync_problem</span> Unreconciled Movement</span><span id="unreconciled-deduction" class="font-semibold text-amber-700 font-data-tabular">-4 pts</span></div><div class="flex justify-between items-center text-xs"><span class="text-on-surface flex items-center gap-1.5 font-medium"><span class="material-symbols-outlined text-[15px] text-on-surface-variant">delete_outline</span> Recorded Site Wastage</span><span class="font-semibold text-on-surface-variant font-data-tabular">-2 pts</span></div><div class="flex justify-between items-center text-xs"><span class="text-on-surface flex items-center gap-1.5 font-medium"><span class="material-symbols-outlined text-[15px] text-primary">videocam</span> Camera Coverage Integrity</span><span class="font-semibold text-primary font-data-tabular">100% (4/4 CAMs)</span></div></div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20">
+<button class="w-full py-2 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">analytics</span> Audit Contributing Risk Factors
+</button>
+</div>
+</section>
+<!-- Movement Insights Card -->
+
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-md text-center text-xs text-on-surface-variant"><div class="px-space-md lg:px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-2"></div></footer>
+
+
+
+
+
+
+
+
+
+</body></html>

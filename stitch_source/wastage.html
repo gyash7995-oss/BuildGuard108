@@ -1,0 +1,991 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>BuildGuard AI</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#001d31","surface-container-lowest":"#ffffff","on-error-container":"#93000a","primary-container":"#15803d","tertiary":"#4f576d","on-error":"#ffffff","tertiary-fixed-dim":"#bec6e0","error":"#ba1a1a","surface-bright":"#f8f9ff","on-primary-fixed":"#00210a","on-primary-container":"#d3ffd5","on-primary":"#ffffff","outline":"#6f7a6e","primary":"#00652c","surface-container-highest":"#d3e4fe","on-background":"#0b1c30","outline-variant":"#becabc","on-tertiary-fixed-variant":"#3f465c","on-surface-variant":"#3f493f","tertiary-fixed":"#dae2fd","on-surface":"#0b1c30","secondary-fixed":"#cce5ff","inverse-surface":"#213145","primary-fixed-dim":"#79db8d","error-container":"#ffdad6","on-secondary-container":"#00476e","inverse-primary":"#79db8d","on-tertiary-container":"#f2f3ff","secondary":"#006398","on-tertiary":"#ffffff","tertiary-container":"#676f86","on-secondary-fixed-variant":"#004b73","surface-variant":"#d3e4fe","surface-dim":"#cbdbf5","secondary-fixed-dim":"#93ccff","surface-tint":"#006d30","surface-container-low":"#eff4ff","secondary-container":"#5bb8fe","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#005323","primary-fixed":"#95f8a7","background":"#f8f9ff","surface":"#f8f9ff","surface-container":"#e5eeff","on-tertiary-fixed":"#131b2e","on-secondary":"#ffffff","surface-container-high":"#dce9ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","margin-tablet":"1.5rem","space-xs":"0.25rem",margin:"1rem","space-xl":"2.25rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-sm":"0.5rem",gutter:"1rem","gutter-tablet":"1.25rem"},fontFamily:{"data-tabular":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"]},fontSize:{"data-tabular":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg-mobile":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0",fontWeight:"400"}],"headline-sm":["1rem",{lineHeight:"1.375rem",letterSpacing:"0",fontWeight:"600"}],"label-md":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"500"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0",fontWeight:"400"}],"headline-md":["1.25rem",{lineHeight:"1.625rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-lg":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.01em",fontWeight:"600"}],"headline-xl-mobile":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.015em",fontWeight:"700"}]}}}};</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-outline-variant/30"><div class="h-16 w-full px-6 flex items-center justify-between gap-4"><div class="flex items-center gap-2 flex-shrink-0"><span class="font-bold text-[18px] text-[#0b1c30] tracking-tight flex items-center gap-1.5">BuildGuard <span class="text-[#006398] font-bold">AI</span><span class="inline-block w-2.5 h-2.5 rounded-full bg-[#15803d]"></span></span></div><div class="hidden xl:flex items-center bg-[#eff4ff] px-3 py-1.5 rounded-full shadow-sm gap-1"><a class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all" data-path="dashboard" href="#">Dashboard</a><a class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-medium text-sm leading-tight text-center transition-all" data-path="live-monitoring" href="#">Live<br>Monitoring</a><a class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-medium text-sm flex items-center gap-1.5 transition-all" data-path="alerts" href="#">Alerts <span class="w-5 h-5 flex items-center justify-center rounded-full bg-[#ba1a1a] text-white text-[11px] font-bold">3</span></a><a class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all" data-path="sitemap" href="#">Sitemap</a><a class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all" data-path="movement" href="#">Movement</a><a aria-current="page" class="px-4 py-1.5 rounded-full bg-[#15803d] text-white font-medium text-sm shadow-sm transition-all" data-path="wastage" href="#">Wastage</a></div><div class="flex items-center gap-3 flex-shrink-0"><button class="flex items-center gap-2 bg-[#eff4ff] hover:bg-[#e5eeff] text-[#0b1c30] px-3.5 py-1.5 rounded-full transition-colors border border-outline-variant/30 text-sm font-semibold" type="button"><span class="material-symbols-outlined text-[18px] text-[#006398]">apartment</span><span class="">Residential Tower A</span><span class="w-2 h-2 rounded-full bg-[#15803d]"></span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></button><button aria-label="Notifications" class="relative p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-[#ba1a1a] text-white text-[10px] font-bold flex items-center justify-center">3</span></button><div class="flex items-center gap-2.5 pl-1 cursor-pointer"><div class="w-9 h-9 rounded-full bg-[#00652c] text-white font-bold text-xs flex items-center justify-center">RM</div><div class="hidden md:flex flex-col text-left"><span class="text-sm font-bold text-[#0b1c30] leading-tight">Rajesh M.</span><span class="text-[11px] text-on-surface-variant leading-tight">Project Director</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant hidden md:block">expand_more</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full">
+<div class="w-full px-space-md lg:px-margin-desktop py-space-lg flex flex-col gap-space-lg">
+<!-- Top Action & Context Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Material Wastage &amp; Damage Ledger</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            Sensors Active
+          </span>
+</div>
+
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-all shadow-sm font-label-lg text-label-lg" id="openExportBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">download</span>
+<span class="">Export Audit Log</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-container text-on-primary hover:opacity-95 active:scale-95 transition-all shadow-md font-label-lg text-label-lg font-semibold" id="openAddWastageModal" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="">+ Add Wastage</span>
+</button>
+</div>
+</div>
+<!-- Summary Metric KPI Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Total Loss -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-error-container/40 pointer-events-none blur-2xl"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Total Wastage Value</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold font-data-tabular" id="metricTotalLoss">₹34,600</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container/60 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">trending_down</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-error font-medium flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span> +4.2% vs last week
+          </span>
+
+</div>
+</div>
+<!-- Metric 2: Quantity Affected -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-secondary-fixed/40 pointer-events-none blur-2xl"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Affected Quantity</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold font-data-tabular" id="metricAffectedUnits">48</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Units / Bags</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-secondary font-medium font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">history</span> Across 5 site incidents
+          </span>
+
+</div>
+</div>
+<!-- Metric 3: Open Cases -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-amber-200/40 pointer-events-none blur-2xl"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Open Investigations</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold font-data-tabular" id="metricOpenCases">2</span>
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-semibold">Under Review</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-medium font-label-md text-label-md">1 high-priority salvage</span>
+<span class="text-amber-700 font-label-sm text-label-sm font-semibold">Action required</span>
+</div>
+</div>
+<!-- Metric 4: Recovered Value -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-primary-fixed/30 pointer-events-none blur-2xl"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Prevented / Claimed</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold font-data-tabular">₹12,400</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-on-primary-container/40 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-primary font-semibold font-label-md text-label-md">Vendor Challan Warranty</span>
+
+</div>
+</div>
+</div>
+<!-- Visual Breakdown Strip: Material Risk & Environmental Conditions -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md"><!-- Card 1: Root Cause Breakdown -->
+
+
+<!-- Card 2: Latest Drone Scan Flag -->
+
+
+<!-- Card 3: AI Predictive Risk & Loss Prevention -->
+</div>
+<!-- Main Table Container: Filter Controls & Records Ledger -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm flex flex-col">
+<!-- Ledger Header & Live Filter Bar -->
+<div class="p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">inventory</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Incident Audit Ledger</h2>
+
+</div>
+</div>
+<!-- Filter Chips and Search -->
+<div class="flex items-center gap-2 flex-wrap">
+<div class="relative min-w-[220px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/70 font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary transition-all outline-none" id="tableSearchInput" placeholder="Search material, cause, zone..." type="text">
+</div>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none cursor-pointer focus:ring-2 focus:ring-secondary" id="filterMaterialSelect"><option value="ALL" class="">All Materials</option><optgroup label="Standard Materials" class=""><option value="Cement">Cement Sacks</option><option value="Bricks">Bricks &amp; Masonry</option><option value="Tiles">Ceramic / Vitrified Tiles</option><option value="Steel">TMT Reinforcement Steel</option><option value="Electrical">Electrical Conduits</option></optgroup><optgroup label="Company-Specific Materials" class=""><option value="BuildGuard Precast">BuildGuard Proprietary Precast Panels</option><option value="Special Batch Concrete">Company Special Batch Concrete</option></optgroup><option value="ADD_CUSTOM" class="font-semibold text-primary">+ Add Custom Material...</option></select>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none cursor-pointer focus:ring-2 focus:ring-secondary" id="filterStatusSelect">
+<option value="ALL">All Statuses</option>
+<option value="Under Review">Under Review</option>
+<option value="Approved &amp; Reconciled">Approved &amp; Reconciled</option>
+<option value="Vendor Claim Filed">Vendor Claim Filed</option>
+</select>
+<button class="h-10 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center" id="resetFiltersBtn" title="Reset Filters" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Table Viewport -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container-low/70 text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-3 px-space-lg font-semibold">Incident Ref &amp; Time</th>
+<th class="py-3 px-space-md font-semibold">Material</th>
+<th class="py-3 px-space-md font-semibold">Quantity Loss Approx</th>
+<th class="py-3 px-space-md font-semibold">Root Cause</th>
+<th class="py-3 px-space-md font-semibold">Site Location</th>
+<th class="py-3 px-space-md font-semibold font-data-tabular">Est. Loss (₹)</th>
+<th class="py-3 px-space-md font-semibold text-center">Evidence</th>
+<th class="py-3 px-space-md font-semibold">Status</th>
+<th class="py-3 px-space-lg text-right font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="text-on-surface" id="wastageTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group" data-material="Cement" data-row-id="1" data-status="Under Review">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-secondary font-data-tabular">#INC-8924</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">21 Oct 2026 16:20</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Ultratech 53 Grade Cement</span>
+
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-medium text-error">4 bags (50kg ea)</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Rain &amp; moisture hardening</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Open Storage Zone C</span>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-bold text-on-surface">₹1,680</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-secondary font-label-sm text-label-sm font-semibold transition-all" onclick="openPhotoViewerModal('Ultratech Cement Seepage', '4 bags ruined by unfastened tarp seam')" type="button">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span> Photo (2)
+                </button>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                  Under Review
+                </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary hover:text-on-secondary text-secondary font-label-md text-label-md font-semibold transition-all" onclick="openInvestigationModal(1)" type="button">
+                    Investigate
+                  </button>
+<button class="p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary text-primary transition-all" onclick="resolveRecordRow(1)" title="Mark Resolved" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group" data-material="Bricks" data-row-id="2" data-status="Approved &amp; Reconciled">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-secondary font-data-tabular">#INC-8919</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">20 Oct 2026 11:15</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Red Clay Modular Bricks</span>
+
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-medium text-on-surface">120 pieces</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="">Forklift impact during offload</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Staging Area 2</span>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-bold text-on-surface">₹3,600</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-secondary font-label-sm text-label-sm font-semibold transition-all" onclick="openPhotoViewerModal('Crushed Brick Pallet', 'Impact from hydraulic lift mast fracture')" type="button">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span> Photo (3)
+                </button>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-on-primary-container/70 text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Approved &amp; Reconciled
+                </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary hover:text-on-secondary text-secondary font-label-md text-label-md font-semibold transition-all" onclick="openInvestigationModal(2)" type="button">
+                    Investigate
+                  </button>
+<span class="text-on-surface-variant/40 material-symbols-outlined text-[18px]">verified</span>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group" data-material="Tiles" data-row-id="3" data-status="Vendor Claim Filed">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-secondary font-data-tabular">#INC-8902</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">19 Oct 2026 09:30</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Kajaria Vitrified Tiles 60x60</span>
+
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-medium text-on-surface">8 crates (32 pcs)</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">Edge chipping during freight transit</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Inbound Freight Bay</span>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-bold text-on-surface">₹4,800</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-secondary font-label-sm text-label-sm font-semibold transition-all" onclick="openPhotoViewerModal('Chipped Tile Consignment', 'Container door shift caused internal crate collapse')" type="button">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span> Photo (4)
+                </button>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Vendor Claim Filed
+                </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary hover:text-on-secondary text-secondary font-label-md text-label-md font-semibold transition-all" onclick="openInvestigationModal(3)" type="button">
+                    Investigate
+                  </button>
+<button class="p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary text-primary transition-all" onclick="resolveRecordRow(3)" title="Mark Resolved" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group" data-material="Steel" data-row-id="4" data-status="Under Review">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-secondary font-data-tabular">#INC-8894</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">18 Oct 2026 14:40</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Tata Tiscon Fe550D TMT Steel</span>
+
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-medium text-error">3 bent bars (12m ea)</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="">Crane sling twist buckle</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Level 3 Deck Hoist</span>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-bold text-on-surface">₹2,400</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-secondary font-label-sm text-label-sm font-semibold transition-all" onclick="openPhotoViewerModal('Deformed Rebar Bundles', 'Severe mechanical kink exceeds ASTM bend specs')" type="button">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span> Photo (1)
+                </button>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                  Under Review
+                </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary hover:text-on-secondary text-secondary font-label-md text-label-md font-semibold transition-all" onclick="openInvestigationModal(4)" type="button">
+                    Investigate
+                  </button>
+<button class="p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary text-primary transition-all" onclick="resolveRecordRow(4)" title="Mark Resolved" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group" data-material="Electrical" data-row-id="5" data-status="Approved &amp; Reconciled">
+<td class="py-3.5 px-space-lg">
+<div class="flex flex-col">
+<span class="font-semibold text-secondary font-data-tabular">#INC-8877</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">17 Oct 2026 08:20</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Heavy Duty PVC Conduits 25mm</span>
+
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-medium text-on-surface">18 pipes (3m ea)</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="">Heavy equipment runover in access lane</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Work Zone Floor 4</span>
+</td>
+<td class="py-3.5 px-space-md font-data-tabular font-bold text-on-surface">₹1,950</td>
+<td class="py-3.5 px-space-md text-center">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-secondary font-label-sm text-label-sm font-semibold transition-all" onclick="openPhotoViewerModal('Crushed Electrical Conduits', 'Compactor tread rolled over unbarricaded bundle')" type="button">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span> Photo (2)
+                </button>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-on-primary-container/70 text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Approved &amp; Reconciled
+                </span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary hover:text-on-secondary text-secondary font-label-md text-label-md font-semibold transition-all" onclick="openInvestigationModal(5)" type="button">
+                    Investigate
+                  </button>
+<span class="text-on-surface-variant/40 material-symbols-outlined text-[18px]">verified</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer & Pagination -->
+<div class="p-space-md bg-surface-container-low/30 rounded-b-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-md text-label-md">
+
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-colors disabled:opacity-50" disabled="" type="button">Previous</button>
+<span class="px-2 font-semibold text-on-surface">Page 1 of 1</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm transition-colors disabled:opacity-50" disabled="" type="button">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL: ADD WASTAGE INCIDENT -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm hidden transition-all" id="addWastageModal">
+<div class="w-full max-w-2xl rounded-2xl bg-surface-container-lowest shadow-2xl overflow-hidden flex flex-col max-h-[921px]">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Log Material Wastage / Damage</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Autonomous reconciliation record will be generated.</p>
+</div>
+</div>
+<button class="p-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="closeAddWastageModal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Form) -->
+<form class="p-space-lg overflow-y-auto space-y-4" id="addWastageForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Material Selection -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Material Category <span class="text-error">*</span></label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary outline-none" id="modalMaterial" required="">
+<option disabled="" selected="" value="">Select damaged material</option>
+<option value="Cement">Cement (Ultratech 53G)</option>
+<option value="Bricks">Bricks (Red Clay Wirecut)</option>
+<option value="Tiles">Ceramic / Vitrified Tiles</option>
+<option value="Steel">TMT Steel Rebars (Fe550)</option>
+<option value="Electrical">Electrical Conduits / Cables</option>
+</select>
+</div>
+<!-- Quantity Loss -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Quantity &amp; Measurement Unit <span class="text-error">*</span></label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary outline-none" id="modalQuantity" placeholder="e.g. 10 bags, 25 pieces, 6 bars" required="" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Primary Cause -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Root Cause <span class="text-error">*</span></label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary outline-none" id="modalCause" required="">
+<option value="Rain/Weather Exposure">Rain / Weather Inundation</option>
+<option value="Handling Damage">Handling &amp; Forklift Damage</option>
+<option value="Storage Failure">Storage Shelf / Stacking Collapse</option>
+<option value="Defective Supplier Batch">Defective Supplier Batch / Cracking</option>
+<option value="Transit Impact">Transit Impact &amp; Offload Drop</option>
+</select>
+</div>
+<!-- Site Location -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Location / Sector <span class="text-error">*</span></label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary outline-none" id="modalLocation" required="">
+<option value="Open Storage Zone C">Open Storage Zone C</option>
+<option value="Staging Area 2">Staging Area 2</option>
+<option value="Work Zone Floor 4">Work Zone Floor 4</option>
+<option value="Inbound Freight Bay">Inbound Freight Bay</option>
+<option value="Level 3 Deck Hoist">Level 3 Deck Hoist</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Date & Time -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Incident Timestamp <span class="text-error">*</span></label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary outline-none" id="modalTimestamp" required="" type="datetime-local">
+</div>
+<!-- Estimated Financial Loss -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Estimated Loss (₹ INR) <span class="text-error">*</span></label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-bold text-on-surface-variant font-data-tabular">₹</span>
+<input class="w-full h-10 pl-8 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md font-data-tabular focus:ring-2 focus:ring-primary outline-none" id="modalLoss" min="0" placeholder="e.g. 2500" required="" type="number">
+</div>
+</div>
+</div>
+<!-- Evidence Attachment Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Photographic / Sensor Proof</label>
+<div class="p-4 rounded-xl bg-surface-container-low hover:bg-surface-container/70 transition-colors flex flex-col items-center justify-center text-center cursor-pointer relative">
+<input accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer" id="modalFileInput" type="file">
+<span class="material-symbols-outlined text-[28px] text-secondary mb-1">cloud_upload</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold" id="fileUploadLabel">Upload site damage inspection photo or slip</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">JPG, PNG, or drone survey EXIF (Up to 15MB)</span>
+</div>
+</div>
+<!-- Notes / Observation -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Inspector Findings &amp; Root Observation</label>
+<textarea class="p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-primary outline-none resize-none" id="modalNotes" placeholder="Provide site inspector context, challan discrepancies, weather triggers, or driver identification..." rows="3"></textarea>
+</div>
+<!-- Modal Actions -->
+<div class="pt-3 flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container font-label-lg text-label-lg transition-colors" id="cancelModalBtn" type="button">
+            Cancel
+          </button>
+<button class="px-5 py-2 rounded-xl bg-primary-container text-on-primary hover:opacity-95 font-label-lg text-label-lg font-semibold shadow-md transition-all flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+            Save Record
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- DRAWER: CASE INVESTIGATION & EVIDENCE REVIEW -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm transition-all flex justify-end hidden" id="investigationDrawer">
+<div class="w-full max-w-xl h-full bg-surface-container-lowest shadow-2xl flex flex-col overflow-y-auto">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between sticky top-0 z-10">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-data-tabular" id="drawerIncidentId">Case #INC-0001</span>
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold" id="drawerBadge">Under Review</span>
+</div>
+<button class="p-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="closeDrawerBtn" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Drawer Content -->
+<div class="p-space-lg space-y-space-lg flex-1">
+<!-- Photographic Proof Block -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Uploaded Damage Photometrics</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-data-tabular">21-10-2026 16:22 IST</span>
+</div>
+<div class="rounded-xl overflow-hidden shadow-sm relative group bg-surface-container-high">
+<img class="w-full h-56 object-cover" data-alt="High resolution detailed inspection photo showing torn punctured cement sacks with hydration lumps caused by rainwater leakage in an outdoor staging zone, macro texture of hardened ruined grey Portland cement, safety tape perimeter." id="drawerPhotoImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWreOIBiMw1u_g4qdBSZEcQoyuTNaOmgfwERCSL-O4tJTAxxlDN93FYgKSHGxlqMO1yTgoyhdcaVr7_JhE_7LL-FQ-TpVNvlIKdX5KY1mprKOZ6_01P8V5fAtLENDVsyA1Yb4N06Pu8O1t4ZP2UGzcwOnNJPpVkkxCJbejK17Zyq-9FFKi6nYXUlMh3oZMjKsaTvNiNsv3RYuet6pHlHxEdOb0TZvpZ5Z1V01eyYKchModOhfkwb7e">
+<div class="p-3 bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Camera: Rugged ToughTab Sensor Exif #882</span>
+<button class="text-secondary font-label-sm text-label-sm font-semibold hover:underline flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">zoom_in</span> Full Resolution
+              </button>
+</div>
+</div>
+</div>
+<!-- Telemetry & Sensor Cross-Check -->
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">thermostat</span>
+              Storage Humidity Log at Incident Time
+            </span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">84% RH (Spike)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">IoT Environmental probe Node-C3 logged elevated relative humidity starting at 15:45 IST, indicating roof tarp membrane tear.</p>
+<div class="mt-3 flex items-center justify-between text-on-surface font-data-tabular font-label-sm text-label-sm pt-2">
+<span class="">Peak Moisture: <strong>4.8mm</strong></span>
+<span class="">Wind Gust: <strong>28 km/h</strong></span>
+<span class="">Dew Point: <strong>23.2°C</strong></span>
+</div>
+</div>
+<!-- Supplier & Delivery Slip Reference -->
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">receipt_long</span>
+              Inbound Challan Discrepancy Record
+            </span>
+<span class="text-primary font-label-sm text-label-sm font-semibold">Challan #CH-88219</span>
+</div>
+<div class="space-y-1.5 text-on-surface font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Vendor:</span>
+<span class="font-medium">Ultratech Regional Depot 4</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Dispatched Lot:</span>
+<span class="font-medium">500 Bags (OPC 53)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Warranty Clause:</span>
+<span class="font-medium text-primary">Covered if handling damage in transit</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Contractor Fault:</span>
+<span class="font-medium text-error">Yard Tarp failure (Internal site liability)</span>
+</div>
+</div>
+</div>
+<!-- Investigation Notes and Timeline -->
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">Audit History</h4>
+<div class="space-y-3">
+<div class="flex items-start gap-2.5">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-[10px] mt-0.5">RM</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rajesh M. (Project Director)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Requested immediate tarp reinforcement in Zone C. Noted 4 bags as total write-off due to solidification.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 mt-0.5">21 Oct 2026 16:35 IST</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-[10px] mt-0.5">AI</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">BuildGuard AI Telemetry Daemon</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Autonomous drone point cloud flagged 20 sq. ft moisture pooling directly over cement pallets.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 mt-0.5">21 Oct 2026 16:21 IST</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between gap-space-sm sticky bottom-0 z-10">
+<button class="px-4 py-2 rounded-xl bg-surface-container-lowest text-secondary hover:bg-surface-container-high font-label-lg text-label-lg font-semibold transition-colors flex items-center gap-1.5 shadow-sm" id="fileVendorClaimBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+          File Vendor Claim
+        </button>
+<button class="px-5 py-2 rounded-xl bg-primary-container text-on-primary hover:opacity-95 font-label-lg text-label-lg font-semibold shadow-md transition-all flex items-center gap-1.5" id="approveReconcileBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+          Approve &amp; Reconcile
+        </button>
+</div>
+</div>
+</div>
+<!-- POPUP: QUICK PHOTO VIEWER MODAL -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/50 backdrop-blur-sm hidden transition-all" id="photoViewerModal">
+<div class="w-full max-w-xl rounded-2xl bg-surface-container-lowest shadow-2xl overflow-hidden flex flex-col">
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="photoModalTitle">Evidence Photo</span>
+<button class="p-1 rounded-full text-on-surface-variant hover:text-on-surface" id="closePhotoViewerModal" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<img class="w-full h-72 object-cover rounded-xl" data-alt="High detail clear evidentiary construction site damage photo exhibiting fractured materials, cracked concrete tiles, or deformed rebar on job site ground with digital timestamp watermarks." id="photoModalImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUc8KjivdeNDA1IKwP6kg5BGqqNtIaX0bDuOxY65VrVGXjYwwgnEM4Bhj9s6Kg76DdLmXdDbDfOnEMaYUqp1BExxR3GkdCFDx0HC9US2YyHRdSqeBPqiR9Ux6g00GZkdaTdoECK8nUjQ3NV6W9ENL27AvX47_Qke70KJBn08XuRj1yFpVrpxFybaF8e6H4o-ss_6AA3zOo6fRgj1nX1afNc8sSt_7YNU_1FcbDP863-zkiYh7Cb84w">
+<p class="font-body-md text-body-md text-on-surface-variant px-1" id="photoModalCaption"></p>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Logic -->
+<script>
+    (function () {
+      let currentTotalLoss = 34600;
+      let openCasesCount = 2;
+      let totalUnitsAffected = 48;
+
+      // DOM Elements
+      const openModalBtn = document.getElementById('openAddWastageModal');
+      const closeModalBtn = document.getElementById('closeAddWastageModal');
+      const cancelModalBtn = document.getElementById('cancelModalBtn');
+      const addModal = document.getElementById('addWastageModal');
+      const addForm = document.getElementById('addWastageForm');
+      const wastageTableBody = document.getElementById('wastageTableBody');
+      const metricTotalLossEl = document.getElementById('metricTotalLoss');
+      const metricAffectedUnitsEl = document.getElementById('metricAffectedUnits');
+      const metricOpenCasesEl = document.getElementById('metricOpenCases');
+      
+      const searchInput = document.getElementById('tableSearchInput');
+      const filterMaterial = document.getElementById('filterMaterialSelect');
+      const filterStatus = document.getElementById('filterStatusSelect');
+      const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+      const fileUploadInput = document.getElementById('modalFileInput');
+      const fileUploadLabel = document.getElementById('fileUploadLabel');
+
+      const drawer = document.getElementById('investigationDrawer');
+      const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+      const drawerIncidentId = document.getElementById('drawerIncidentId');
+      const drawerBadge = document.getElementById('drawerBadge');
+      const approveReconcileBtn = document.getElementById('approveReconcileBtn');
+      const fileVendorClaimBtn = document.getElementById('fileVendorClaimBtn');
+
+      const photoModal = document.getElementById('photoViewerModal');
+      const closePhotoModal = document.getElementById('closePhotoViewerModal');
+      const photoModalTitle = document.getElementById('photoModalTitle');
+      const photoModalCaption = document.getElementById('photoModalCaption');
+
+      // Set timestamp default to current local time
+      const now = new Date();
+      now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+      const timestampInput = document.getElementById('modalTimestamp');
+      if (timestampInput) {
+        timestampInput.value = now.toISOString().slice(0, 16);
+      }
+
+      // Modal Open / Close
+      function toggleModal(show) {
+        if (show) {
+          addModal.classList.remove('hidden');
+        } else {
+          addModal.classList.add('hidden');
+          addForm.reset();
+          if (fileUploadLabel) fileUploadLabel.textContent = "Upload site damage inspection photo or slip";
+        }
+      }
+
+      if (openModalBtn) openModalBtn.addEventListener('click', () => toggleModal(true));
+      if (closeModalBtn) closeModalBtn.addEventListener('click', () => toggleModal(false));
+      if (cancelModalBtn) cancelModalBtn.addEventListener('click', () => toggleModal(false));
+
+      // File input feedback
+      if (fileUploadInput) {
+        fileUploadInput.addEventListener('change', (e) => {
+          if (e.target.files && e.target.files[0]) {
+            fileUploadLabel.textContent = e.target.files[0].name + " (Ready for upload)";
+          }
+        });
+      }
+
+      // Add New Wastage Form Submit
+      if (addForm) {
+        addForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const material = document.getElementById('modalMaterial').value;
+          const quantity = document.getElementById('modalQuantity').value;
+          const cause = document.getElementById('modalCause').value;
+          const location = document.getElementById('modalLocation').value;
+          const timestamp = document.getElementById('modalTimestamp').value;
+          const lossValue = parseInt(document.getElementById('modalLoss').value, 10) || 0;
+
+          // Parse unit number if possible to update affected metric
+          const numMatch = quantity.match(/\d+/);
+          const parsedUnits = numMatch ? parseInt(numMatch[0], 10) : 1;
+
+          // Format Date
+          const dateObj = new Date(timestamp);
+          const formattedDate = dateObj.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) + ' ' +
+                                dateObj.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+
+          const newIdNum = Math.floor(1000 + Math.random() * 9000);
+          const incidentId = '#INC-' + newIdNum;
+
+          // Badges and labels according to category
+          let code = "MAT";
+          let codeClass = "bg-surface-container-high text-on-surface";
+          if (material === 'Cement') { code = "CEM"; codeClass = "bg-amber-100 text-amber-800"; }
+          else if (material === 'Bricks') { code = "BRK"; codeClass = "bg-red-100 text-red-800"; }
+          else if (material === 'Tiles') { code = "TIL"; codeClass = "bg-blue-100 text-blue-800"; }
+          else if (material === 'Steel') { code = "STL"; codeClass = "bg-slate-200 text-slate-800"; }
+          else if (material === 'Electrical') { code = "ELE"; codeClass = "bg-purple-100 text-purple-800"; }
+
+          // Construct New Row HTML
+          const tr = document.createElement('tr');
+          tr.className = "hover:bg-surface-container-low/50 transition-colors group";
+          tr.setAttribute('data-material', material);
+          tr.setAttribute('data-status', 'Under Review');
+          tr.setAttribute('data-row-id', newIdNum);
+
+          tr.innerHTML = `
+            <td class="py-3.5 px-space-lg">
+              <div class="flex flex-col">
+                <span class="font-semibold text-secondary font-data-tabular">${incidentId}</span>
+                <span class="text-on-surface-variant font-label-sm text-label-sm">${formattedDate}</span>
+              </div>
+            </td>
+            <td class="py-3.5 px-space-md">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded ${codeClass} flex items-center justify-center font-bold text-[11px]">${code}</div>
+                <div class="flex flex-col">
+                  <span class="font-semibold text-on-surface">${material} Stock</span>
+                  <span class="text-on-surface-variant font-label-sm text-label-sm">Field Logged Entry</span>
+                </div>
+              </div>
+            </td>
+            <td class="py-3.5 px-space-md font-data-tabular font-medium text-error">${quantity}</td>
+            <td class="py-3.5 px-space-md">
+              <div class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>${cause}</span>
+              </div>
+            </td>
+            <td class="py-3.5 px-space-md">
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">${location}</span>
+            </td>
+            <td class="py-3.5 px-space-md font-data-tabular font-bold text-on-surface">₹${lossValue.toLocaleString('en-IN')}</td>
+            <td class="py-3.5 px-space-md text-center">
+              <button type="button" onclick="openPhotoViewerModal('${material} Damage Proof', 'Field capture submitted via rapid logger')" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-secondary font-label-sm text-label-sm font-semibold transition-all">
+                <span class="material-symbols-outlined text-[15px]">photo_camera</span> Photo (1)
+              </button>
+            </td>
+            <td class="py-3.5 px-space-md">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                Under Review
+              </span>
+            </td>
+            <td class="py-3.5 px-space-lg text-right">
+              <div class="flex items-center justify-end gap-1.5">
+                <button type="button" onclick="openInvestigationModal(${newIdNum})" class="px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary hover:text-on-secondary text-secondary font-label-md text-label-md font-semibold transition-all">
+                  Investigate
+                </button>
+                <button type="button" onclick="resolveRecordRow(${newIdNum})" class="p-1.5 rounded-lg hover:bg-primary-container hover:text-on-primary text-primary transition-all" title="Mark Resolved">
+                  <span class="material-symbols-outlined text-[18px]">done</span>
+                </button>
+              </div>
+            </td>
+          `;
+
+          // Insert at the beginning of table
+          wastageTableBody.insertBefore(tr, wastageTableBody.firstChild);
+
+          // Update KPI Metrics in the UI
+          currentTotalLoss += lossValue;
+          totalUnitsAffected += parsedUnits;
+          openCasesCount += 1;
+
+          metricTotalLossEl.textContent = '₹' + currentTotalLoss.toLocaleString('en-IN');
+          metricAffectedUnitsEl.textContent = totalUnitsAffected;
+          metricOpenCasesEl.textContent = openCasesCount;
+
+          toggleModal(false);
+          filterRows();
+        });
+      }
+
+      // Filter & Search Logic
+      function filterRows() {
+        const query = searchInput.value.toLowerCase().trim();
+        const selectedMat = filterMaterial.value;
+        const selectedStatus = filterStatus.value;
+        const rows = wastageTableBody.querySelectorAll('tr');
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+          const rowText = row.textContent.toLowerCase();
+          const rowMat = row.getAttribute('data-material') || '';
+          const rowStatus = row.getAttribute('data-status') || '';
+
+          const matchQuery = !query || rowText.includes(query);
+          const matchMat = selectedMat === 'ALL' || rowMat === selectedMat;
+          const matchStatus = selectedStatus === 'ALL' || rowStatus === selectedStatus;
+
+          if (matchQuery && matchMat && matchStatus) {
+            row.style.display = '';
+            visibleCount++;
+          } else {
+            row.style.display = 'none';
+          }
+        });
+
+        const showingCount = document.getElementById('showingCountText');
+        if (showingCount) {
+          showingCount.textContent = `Showing ${visibleCount} of ${rows.length} logged incidents`;
+        }
+      }
+
+      if (searchInput) searchInput.addEventListener('input', filterRows);
+      if (filterMaterial) filterMaterial.addEventListener('change', filterRows);
+      if (filterStatus) filterStatus.addEventListener('change', filterRows);
+      if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          filterMaterial.value = 'ALL';
+          filterStatus.value = 'ALL';
+          filterRows();
+        });
+      }
+
+      // Drawer Functions
+      let activeCaseRowId = null;
+      window.openInvestigationModal = function(id) {
+        activeCaseRowId = id;
+        drawerIncidentId.textContent = 'Case #INC-' + (id.toString().padStart(4, '0'));
+        drawer.classList.remove('hidden');
+      };
+
+      if (closeDrawerBtn) {
+        closeDrawerBtn.addEventListener('click', () => {
+          drawer.classList.add('hidden');
+        });
+      }
+
+      if (approveReconcileBtn) {
+        approveReconcileBtn.addEventListener('click', () => {
+          if (activeCaseRowId) {
+            resolveRecordRow(activeCaseRowId);
+          }
+          drawer.classList.add('hidden');
+        });
+      }
+
+      if (fileVendorClaimBtn) {
+        fileVendorClaimBtn.addEventListener('click', () => {
+          if (activeCaseRowId) {
+            setVendorClaimStatus(activeCaseRowId);
+          }
+          drawer.classList.add('hidden');
+        });
+      }
+
+      // Resolve Record Helper
+      window.resolveRecordRow = function(id) {
+        const row = document.querySelector(`tr[data-row-id="${id}"]`);
+        if (!row) return;
+
+        const previousStatus = row.getAttribute('data-status');
+        if (previousStatus === 'Under Review' && openCasesCount > 0) {
+          openCasesCount -= 1;
+          metricOpenCasesEl.textContent = openCasesCount;
+        }
+
+        row.setAttribute('data-status', 'Approved & Reconciled');
+        const statusCell = row.children[7];
+        statusCell.innerHTML = `
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-on-primary-container/70 text-primary font-label-sm text-label-sm font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            Approved &amp; Reconciled
+          </span>
+        `;
+        const actionCell = row.children[8];
+        actionCell.innerHTML = `
+          <div class="flex items-center justify-end gap-1.5">
+            <button type="button" onclick="openInvestigationModal(${id})" class="px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary hover:text-on-secondary text-secondary font-label-md text-label-md font-semibold transition-all">
+              Investigate
+            </button>
+            <span class="text-on-surface-variant/40 material-symbols-outlined text-[18px]">verified</span>
+          </div>
+        `;
+      };
+
+      // Vendor Claim Helper
+      function setVendorClaimStatus(id) {
+        const row = document.querySelector(`tr[data-row-id="${id}"]`);
+        if (!row) return;
+
+        const previousStatus = row.getAttribute('data-status');
+        if (previousStatus === 'Under Review' && openCasesCount > 0) {
+          openCasesCount -= 1;
+          metricOpenCasesEl.textContent = openCasesCount;
+        }
+
+        row.setAttribute('data-status', 'Vendor Claim Filed');
+        const statusCell = row.children[7];
+        statusCell.innerHTML = `
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Vendor Claim Filed
+          </span>
+        `;
+      }
+
+      // Quick Photo Viewer Modal
+      window.openPhotoViewerModal = function(title, caption) {
+        photoModalTitle.textContent = title;
+        photoModalCaption.textContent = caption;
+        photoModal.classList.remove('hidden');
+      };
+
+      if (closePhotoModal) {
+        closePhotoModal.addEventListener('click', () => {
+          photoModal.classList.add('hidden');
+        });
+      }
+
+    })();
+  </script>
+</div></main>
+
+
+
+
+
+
+
+
+
+</body></html>
